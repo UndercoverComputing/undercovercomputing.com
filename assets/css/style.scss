@@ -28,6 +28,8 @@
     border-radius: 10px;
     overflow: hidden;
     transition: transform 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
 }
 
 .service-item:hover {
@@ -35,13 +37,22 @@
 }
 
 .service-item img {
-    width: 100%;
+    width: 50%; /* Adjust this width as needed */
     height: auto;
     display: block;
 }
 
 .service-content {
     padding: 20px;
+    width: 50%; /* Adjust this width as needed */
+}
+
+.service-left {
+    order: -1; /* Ensure text appears to the left of the image */
+}
+
+.service-right {
+    order: 1; /* Ensure text appears to the right of the image */
 }
 
 .service-content h3 {
@@ -70,5 +81,15 @@
 
     .service-item {
         width: 80%;
+        flex-direction: column;
+    }
+
+    .service-item img,
+    .service-content {
+        width: 100%;
+    }
+
+    .service-left, .service-right {
+        order: 0; /* Reset the order for small screens */
     }
 }
