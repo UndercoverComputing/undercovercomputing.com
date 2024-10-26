@@ -3,6 +3,8 @@
 
 @import 'jekyll-theme-cayman';
 
+/* ---- index.html ---- */
+
 /* Header */
 .site-nav {
     display: flex;
@@ -99,28 +101,58 @@ footer ul li {
 
 /* Footer Styles */
 footer p {
-    margin-bottom: 10px; /* Space below the text */
-    font-size: 1.2em; /* Slightly larger font size */
+    margin-bottom: 10px;
+    font-size: 1.2em;
 }
 
 footer ul {
     list-style-type: none;
     padding: 0;
-    margin: 0; /* Remove default margin */
+    margin: 0;
 }
 
 footer ul li {
     display: inline;
-    margin: 0 15px; /* Increase space between items */
+    margin: 0 15px;
 }
 
 footer ul li a {
     color: #000;
     text-decoration: none;
-    transition: color 0.3s; /* Smooth transition for color */
+    transition: color 0.3s;
 }
 
 footer ul li a:hover {
-    color: #00bbff; /* Change color on hover */
-    text-decoration: underline; /* Keep underline on hover */
+    color: #00bbff;
+    text-decoration: underline;
+}
+
+/* ---- contact.html ---- */
+
+/* Contact */
+a:link, a:visited {
+  background-color: #007bff;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+a:hover, a:active {
+  background-color: #0056b3;
+}
+a#email-button {
+  background-color: #007bff;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+a#email-button:hover, a#email-button:active {
+  background-color: #0056b3;
 }
