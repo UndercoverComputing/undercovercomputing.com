@@ -1,4 +1,7 @@
-function copyEmail() {
+function copyEmail(event) {
+    // Prevent the default action of the anchor tag
+    event.preventDefault();
+
     // Copy the email to clipboard
     navigator.clipboard.writeText("undercovercomputing@gmail.com").then(function() {
         // Display the confirmation message
@@ -7,6 +10,6 @@ function copyEmail() {
         // Hide the confirmation message after a few seconds (4x longer)
         setTimeout(function() {
             document.getElementById("confirmation-message").style.display = "none";
-        }, 8000); // Changed from 2000 to 8000 milliseconds
+        }, 8000); // 8 seconds
     });
 }
