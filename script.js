@@ -16,9 +16,9 @@ function copyEmail(event) {
 
 // Array to store image paths (make sure to add actual image filenames to this array)
 const adImages = [
-    "/Website/Images/Ads/Computer_Repairs_Ad.jpg",
-    "/Website/Images/Ads/A4_Ad-Email.jpg",
-    "/Website/Images/Ads/WiFi_Services_Facebook_Ad.jpg",
+    "/Website/images/Ads/Computer_Repairs_Ad.jpg",
+    "/Website/images/Ads/A4_Ad-Email.jpg",
+    "/Website/images/Ads/WiFi_Services_Facebook_Ad.jpg",
     // Add more images as needed
 ];
 
