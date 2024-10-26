@@ -33,12 +33,17 @@
 
 .service-item:nth-child(even) .service-content {
     order: -1;
+    margin-left: 20px; /* Add margin for even items (text on left) */
+}
+
+.service-item:nth-child(odd) .service-content {
+    margin-right: 10px; /* Reduce margin for odd items (text on right) */
 }
 
 .service-item img {
     width: 50%;
     height: auto;
-    margin-right: 20px;
+    margin-right: 20px; /* Keep margin-right for even items */
     border-radius: 15px;
 }
 
@@ -81,6 +86,7 @@
         order: -1;
     }
 }
+
 /* Footer */
 footer {
     text-align: center;
