@@ -9,6 +9,18 @@
     background-color: #fff;
 }
 
+/* Header */
+.site-nav {
+    display: flex;
+    justify-content: center;
+    gap: 2rem; /* Adjusts space between items */
+}
+
+.nav-link {
+    text-decoration: none; /* Optional: removes underline */
+    color: inherit; /* Keeps text color the same as the header */
+}
+
 /* Services */
 .service-item {
     display: flex;
@@ -65,4 +77,59 @@
     .service-content {
         order: -1; /* Ensures text appears above the image on mobile */
     }
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: #333;
+    color: #fff;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif; /* Change font */
+    border-top: 2px solid #444; /* Add a border for separation */
+}
+
+footer p {
+    margin-bottom: 10px; /* Space below the text */
+    font-size: 1.2em; /* Slightly larger font size */
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; /* Remove default margin */
+}
+
+footer ul li {
+    display: inline;
+    margin: 0 15px; /* Increase space between items */
+}
+
+footer ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s; /* Smooth transition for color */
+}
+
+footer ul li a:hover {
+    color: #ffcc00; /* Change color on hover */
+    text-decoration: underline; /* Keep underline on hover */
 }
