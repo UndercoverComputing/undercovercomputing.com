@@ -14,34 +14,27 @@ function copyEmail(event) {
     });
 }
 
-// Path to the images folder
-const imagesPath = "/Website/Images/Ads";
-
-// List of image filenames (Update this list if more images are added)
-const images = [
-    "Computer_Repairs_Ad.jpg",
-    "Ad2.jpg",
-    "Ad3.jpg",
+// Array to store image paths (make sure to add actual image filenames to this array)
+const adImages = [
+    "/Website/Images/Ads/Computer_Repairs_Ad.jpg",
+    "/Website/Images/Ads/A4_Ad-Email.jpg",
+    "/Website/Images/Ads/WiFi_Services_Facebook_Ad.jpg",
     // Add more images as needed
 ];
 
-// Select the image element in the HTML
-const imageElement = document.querySelector(".contact-photo img");
+let currentImageIndex = 0;
 
-// Index to keep track of the current image
-let currentIndex = 0;
+// Function to change the advertisement image
+function changeImage() {
+    const adElement = document.getElementById("advertisement-image");
+    adElement.src = adImages[currentImageIndex];
 
-// Function to update the image source
-function updateImage() {
-    // Update the src attribute with the current image
-    imageElement.src = `${imagesPath}/${images[currentIndex]}`;
-    
-    // Move to the next image, or loop back to the first
-    currentIndex = (currentIndex + 1) % images.length;
+    // Update index to show the next image in the array
+    currentImageIndex = (currentImageIndex + 1) % adImages.length;
 }
 
-// Initial call to set the first image
-updateImage();
+// Start cycling images every 5 seconds
+setInterval(changeImage, 5000);
 
-// Set the interval to change images every 5 seconds
-setInterval(updateImage, 5000);
+// Initial call to set the first image
+changeImage();
