@@ -28,30 +28,6 @@
     <!-- Main Content -->
     <main id="content" class="main-content" role="main">
     <h2>Contact</h2>
-    <h4>Please fill out this form to send an email!</h4>
-    <form id="fcf-form-id" class="fcf-form-class" method="post" action="/Website/contact.php">
-        <div class="fcf-form-group">
-            <label for="Name" class="fcf-label">Your name</label>
-            <div class="fcf-input-group">
-                <input type="text" id="Name" name="Name" class="fcf-form-control" required>
-            </div>
-        </div>
-        <div class="fcf-form-group">
-            <label for="Email" class="fcf-label">Your email address</label>
-            <div class="fcf-input-group">
-                <input type="email" id="Email" name="Email" class="fcf-form-control" required>
-            </div>
-        </div>
-        <div class="fcf-form-group">
-            <label for="Message" class="fcf-label">Your message</label>
-            <div class="fcf-input-group">
-                <textarea id="Message" name="Message" class="fcf-form-control" rows="6" maxlength="3000" required></textarea>
-            </div>
-        </div>
-        <div class="fcf-form-group">
-            <button type="submit" id="fcf-button" class="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block">Send</button>
-        </div>
-    </form>
     <h4>If you would prefer to email, click the button below!</h4>
         <a href="#" onclick="copyEmail(event)" id="email-button">Send an email</a>
         <p id="confirmation-message" style="display: none; color: green;">Email copied to clipboard!</p>
