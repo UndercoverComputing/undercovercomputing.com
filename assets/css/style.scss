@@ -84,7 +84,6 @@
 footer {
     text-align: center;
     padding: 20px 0;
-    background: #333;
     color: #fff;
 }
 
@@ -99,15 +98,6 @@ footer ul li {
 }
 
 /* Footer Styles */
-footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-    font-family: Arial, sans-serif; /* Change font */
-    border-top: 2px solid #444; /* Add a border for separation */
-}
-
 footer p {
     margin-bottom: 10px; /* Space below the text */
     font-size: 1.2em; /* Slightly larger font size */
@@ -131,6 +121,6 @@ footer ul li a {
 }
 
 footer ul li a:hover {
-    color: #ffcc00; /* Change color on hover */
+    color: #00bbff; /* Change color on hover */
     text-decoration: underline; /* Keep underline on hover */
 }
