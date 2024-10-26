@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
+<html lang="{{ site.lang | default: 'en-US' }}">
 <head>
     <meta charset="UTF-8">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -9,10 +9,39 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="stylesheet" href="/Website/assets/css/style.css">
     <title>Contact Undercover Computing</title>
+    <style>
+        a:link, a:visited {
+          background-color: #007bff;
+          color: white;
+          padding: 14px 25px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          transition: background-color 0.3s ease;
+        }
+        
+        a:hover, a:active {
+          background-color: #0056b3;
+        }
+        a#email-button {
+          background-color: #007bff;
+          color: white;
+          padding: 14px 25px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          transition: background-color 0.3s ease;
+        }
+        
+        a#email-button:hover, a#email-button:active {
+          background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
-    <h3>Contact us</h3>
-    <form id="fcf-form-id" class="fcf-form-class" method="post" action="contact-form-process.php">
+    <h2>Contact</h2>
+    <h4>Please fill out this form to send an email!</h4>
+    <form id="fcf-form-id" class="fcf-form-class" method="post" action="/Website/contact.php">
             <label for="Name" class="fcf-label">Your name</label>
             <div class="fcf-input-group">
                 <input type="text" id="Name" name="Name" class="fcf-form-control" required>
@@ -31,5 +60,10 @@
         <div class="fcf-form-group">
             <button type="submit" id="fcf-button" class="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block">Send</button>
         </div>
+    </form>
+    <h4>If you would prefer to email, click the button below!</h4>
+    <a href="#" onclick="copyEmail()" id="email-button">Send an email</a>
+    <p id="confirmation-message" style="display: none; color: green;">Email copied to clipboard!</p>
+    <script src="/Website/script.js"></script>
 </body>
 </html>
