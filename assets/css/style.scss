@@ -69,6 +69,9 @@
     .service-item {
         flex-direction: column;
         align-items: center;
+    .fcf-form-class {
+        padding: 15px; /* Less padding on smaller screens */
+    }
     }
 
     .service-item img,
@@ -153,7 +156,8 @@ a#email-button:hover, a#email-button:active {
 
 /* Contact Form Styling */
 .fcf-form-class {
-    max-width: 400px; /* Max width for the form */
+    max-width: 700px; /* Increased max width for the form */
+    margin-left: 20px; /* Add margin to the left */
     padding: 20px; /* Padding inside the form */
     background-color: #f9f9f9; /* Light background color */
     border-radius: 10px; /* Rounded corners */
@@ -200,11 +204,4 @@ a#email-button:hover, a#email-button:active {
 
 .fcf-btn:hover {
     background-color: #0056b3; /* Darker blue on hover */
-}
-
-/* Additional styling for responsiveness */
-@media screen and (max-width: 768px) {
-    .fcf-form-class {
-        padding: 15px; /* Less padding on smaller screens */
-    }
 }
