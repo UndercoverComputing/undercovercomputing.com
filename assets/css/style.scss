@@ -3,22 +3,23 @@
 
 @import 'jekyll-theme-cayman';
 
-.welcome-section {
-    padding: 50px;
-    text-align: center;
-    background-color: #fff;
-}
-
 /* Header */
 .site-nav {
     display: flex;
     justify-content: center;
-    gap: 2rem; /* Adjusts space between items */
+    gap: 2rem;
 }
 
 .nav-link {
-    text-decoration: none; /* Optional: removes underline */
-    color: inherit; /* Keeps text color the same as the header */
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Body */
+.welcome-section {
+    padding: 50px;
+    text-align: center;
+    background-color: #fff;
 }
 
 /* Services */
@@ -29,18 +30,18 @@
 }
 
 .service-item:nth-child(even) .service-content {
-    order: -1; /* Alternate text and image positioning for even items on larger screens */
+    order: -1;
 }
 
 .service-item img {
-    width: 50%; /* Adjust as needed */
+    width: 50%;
     height: auto;
-    margin-right: 20px; /* Space between image and text */
-    border-radius: 15px; /* Rounded corners */
+    margin-right: 20px;
+    border-radius: 15px;
 }
 
 .service-content {
-    width: 50%; /* Adjust as needed */
+    width: 50%;
     padding: 0 20px;
 }
 
@@ -64,18 +65,18 @@
 /* Media Queries for smaller screens */
 @media screen and (max-width: 768px) {
     .service-item {
-        flex-direction: column; /* Stack image and text */
+        flex-direction: column;
         align-items: center;
     }
 
     .service-item img,
     .service-content {
         width: 100%;
-        margin-right: 0; /* Remove margin for stacked layout */
+        margin-right: 0;
     }
 
     .service-content {
-        order: -1; /* Ensures text appears above the image on mobile */
+        order: -1;
     }
 }
 
