@@ -156,10 +156,18 @@ a#email-button:hover, a#email-button:active {
   background-color: #0056b3;
 }
 
-/* Contact Photo */
-.contact-photo img {
-    width: 50%; /* Adjust as needed */
-    height: auto;
-    margin-right: 20px; /* Space between image and text */
-    border-radius: 10px; /* Adds a subtle rounded corner */
+/* Advertisement Images */
+
+.slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 300px;
+}
+
+.slider img {
+    max-width: 50%;
+    max-height: 50%;
+    position: absolute;
 }
