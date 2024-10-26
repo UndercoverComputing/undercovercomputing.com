@@ -14,34 +14,27 @@ function copyEmail(event) {
     });
 }
 
-// Simple Image Slider
-let currentIndex = 0;
-const images = document.querySelectorAll('.slider img');
-const totalImages = images.length;
+// Array to store image paths (make sure to add actual image filenames to this array)
+const adImages = [
+    "/Website/Images/Ads/ad1.jpg",
+    "/Website/Images/Ads/ad2.jpg",
+    "/Website/Images/Ads/ad3.jpg",
+    // Add more images as needed
+];
 
-function showNextImage() {
-    images[currentIndex].style.display = 'none';
-    currentIndex = (currentIndex + 1) % totalImages;
-    images[currentIndex].style.display = 'block';
+let currentImageIndex = 0;
+
+// Function to change the advertisement image
+function changeImage() {
+    const adElement = document.getElementById("advertisement-image");
+    adElement.src = adImages[currentImageIndex];
+
+    // Update index to show the next image in the array
+    currentImageIndex = (currentImageIndex + 1) % adImages.length;
 }
 
-// Initialize the slider by hiding all images except the first one
-images.forEach((img, index) => {
-    if (index !== 0) img.style.display = 'none';
-});
+// Start cycling images every 5 seconds
+setInterval(changeImage, 5000);
 
-// Automatically change the image every 3 seconds
-setInterval(showNextImage, 5000);
-
-// script.js
-
-// Smooth scrolling for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});
+// Initial call to set the first image
+changeImage();
