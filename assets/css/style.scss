@@ -94,40 +94,6 @@ footer ul li a:hover {
     text-decoration: underline;
 }
 
-/* Media Queries for smaller screens */
-@media screen and (max-width: 768px) {
-    .service-section {
-        width: 100%; /* Use full width */
-        padding: 0 10px; /* Add some padding for spacing */
-    }
-
-    .service-item {
-        display: flex;
-        flex-direction: column; /* Stack items vertically for mobile */
-        align-items: center; /* Center items */
-        margin-bottom: 30px; /* Adjust space between services */
-        width: 100%; /* Ensure it uses full width */
-    }
-
-    .service-item img {
-        width: 100%; /* Set image to full width */
-        height: auto; /* Maintain aspect ratio */
-        margin-bottom: 10px; /* Space below the image */
-    }
-
-    .service-content {
-        width: 100%; /* Full width for mobile */
-        padding: 0; /* Remove padding for full width */
-        text-align: center; /* Center text inside the service content */
-    }
-
-    .welcome-section {
-        padding: 20px; /* Adjust padding for mobile */
-        text-align: center;
-        background-color: #fff;
-    }
-}
-
 /* ---- index.html ---- */
 
 /* Body */
@@ -143,30 +109,22 @@ footer ul li a:hover {
 }
 
 .service-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 70px; /* Increased margin for more space between services */
-}
-
-.service-item:nth-child(even) .service-content {
-    order: -1;
-    margin-left: 20px; /* Add margin for even items (text on left) */
-}
-
-.service-item:nth-child(odd) .service-content {
-    margin-right: 10px; /* Reduce margin for odd items (text on right) */
+    display: flex; /* Use flexbox */
+    flex-direction: row; /* Align items in a row */
+    align-items: center; /* Center items vertically */
+    margin-bottom: 30px; /* Space between services */
+    width: 100%; /* Full width */
 }
 
 .service-item img {
-    width: 50%;
-    height: auto;
-    margin-right: 20px; /* Keep margin-right for even items */
-    border-radius: 15px;
+    width: 50%; /* Set image to take up half the width */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 20px; /* Space between image and text */
 }
 
 .service-content {
-    width: 50%;
-    padding: 0 20px; /* Add some padding */
+    width: 50%; /* Set text content to take up half the width */
+    padding: 0; /* No padding for full width */
 }
 
 .service-content h3 {
