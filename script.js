@@ -33,8 +33,6 @@ images.forEach((img, index) => {
 // Automatically change the image every 3 seconds
 setInterval(showNextImage, 5000);
 
-// script.js
-
 // Smooth scrolling for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
