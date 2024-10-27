@@ -122,11 +122,11 @@ footer ul li a:hover {
 
 .service-item:nth-child(even) .service-content {
     order: -1;
-    margin-left: 20px; /* Add margin for even items (text on left) */
+    margin-left: 0px; /* Add margin for even items (text on left) */
 }
 
 .service-item:nth-child(odd) .service-content {
-    margin-right: 10px; /* Reduce margin for odd items (text on right) */
+    margin-right: 0px; /* Reduce margin for odd items (text on right) */
 }
 
 .service-item img {
