@@ -167,6 +167,16 @@ a#email-button:hover, a#email-button:active {
   background-color: #0056b3;
 }
 
+/* Center the content */
+.contact {
+    display: flex;             /* Enable flexbox layout */
+    flex-direction: column;    /* Stack children vertically */
+    align-items: center;      /* Center items horizontally */
+    justify-content: center;   /* Center items vertically */
+    text-align: center;       /* Center text inside the elements */
+    height: 100vh;            /* Optional: Full height of the viewport */
+}
+
 /* Advertisement Images */
 .slider {
     display: flex;
