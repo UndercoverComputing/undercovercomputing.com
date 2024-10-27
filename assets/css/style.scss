@@ -48,6 +48,11 @@ img.project-name {
     }
 }
 
+// Optional: Ensure <u> elements also inherit the color from .nav-link
+u.nav-link {
+    color: inherit;
+}
+
 /* Footer */
 footer {
     text-align: center;
