@@ -12,11 +12,18 @@ h2 {
     display: flex;
     justify-content: center;
     gap: 2rem;
+    color: inherit;
 }
 
 .nav-link {
     text-decoration: none;
-    color: black;
+    color: black; // Default color
+    transition: color 0.3s ease; // Smooth transition effect
+
+    // Change color to white on hover
+    &:hover {
+        color: white; // Hover color
+    }
 }
 
 /* Footer */
