@@ -21,8 +21,8 @@ h2 {
 }
 
 .nav-link {
-    text-decoration: none; // Remove underline
-    color: black !important; // Set default color to black, using !important if necessary
+    text-decoration: none; // Remove the underline
+    color: black; // Set default color to black
     transition: color 0.3s ease; // Smooth transition effect
 
     // Change color to white on hover
