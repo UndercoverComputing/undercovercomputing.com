@@ -34,18 +34,24 @@ img.project-name {
     display: flex;
     justify-content: center;
     gap: 2rem;
-    color: inherit;
 }
 
 .nav-link {
-    text-decoration: none; // Remove underline
-    color: black; // Set default color to black
-    transition: color 0.3s ease; // Smooth transition effect
+    text-decoration: none;
+    color: black; /* Set default color to black */
+    transition: color 0.3s ease; /* Smooth transition effect */
+}
 
-    // Change color to white on hover
-    &:hover {
-        color: white; // Hover color
-    }
+.nav-link u {
+    color: inherit; /* Ensure <u> inside .nav-link inherits black color */
+}
+
+.nav-link:hover {
+    color: white; /* Hover color for link */
+}
+
+.nav-link:hover u {
+    color: inherit; /* Make sure <u> inherits white hover color */
 }
 
 // Optional: Ensure <u> elements also inherit the color from .nav-link
