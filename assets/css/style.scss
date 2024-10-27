@@ -116,17 +116,17 @@ footer ul li a:hover {
 
 .service-item:nth-child(even) .service-content {
     order: -1;
-    margin-left: 0px; /* Add margin for even items (text on left) */
+    margin-left: 20px; /* Add margin for even items (text on left) */
 }
 
 .service-item:nth-child(odd) .service-content {
-    margin-right: 0px; /* Reduce margin for odd items (text on right) */
+    margin-right: 10px; /* Reduce margin for odd items (text on right) */
 }
 
 .service-item img {
     width: 50%;
     height: auto;
-    margin-right: 0px; /* Keep margin-right for even items */
+    margin-right: 20px; /* Keep margin-right for even items */
     border-radius: 15px;
 }
 
@@ -151,7 +151,6 @@ footer ul li a:hover {
     margin-bottom: 10px;
     color: #555;
 }
-
 /* ---- contact.html ---- */
 
 /* General Link Styles */
