@@ -96,30 +96,35 @@ footer ul li a:hover {
 
 /* Media Queries for smaller screens */
 @media screen and (max-width: 768px) {
+    .service-section {
+        width: 100%; /* Use full width */
+        padding: 0 10px; /* Add some padding for spacing */
+    }
+
     .service-item {
-        flex-direction: column; /* Stack items vertically */
+        display: flex;
+        flex-direction: column; /* Stack items vertically for mobile */
         align-items: center; /* Center items */
+        margin-bottom: 30px; /* Adjust space between services */
+        width: 100%; /* Ensure it uses full width */
     }
 
-    .service-item img,
-    .service-content {
-        width: 100%; /* Full width on mobile */
-        margin-right: 0; /* Remove right margin */
+    .service-item img {
+        width: 100%; /* Set image to full width */
+        height: auto; /* Maintain aspect ratio */
+        margin-bottom: 10px; /* Space below the image */
     }
 
     .service-content {
-        order: -1; /* Adjust order */
-        padding: 0; /* Remove padding */
+        width: 100%; /* Full width for mobile */
+        padding: 0; /* Remove padding for full width */
+        text-align: center; /* Center text inside the service content */
     }
 
     .welcome-section {
-        padding: 20px 0; /* Adjust padding for mobile */
+        padding: 20px; /* Adjust padding for mobile */
         text-align: center;
         background-color: #fff;
-    }
-
-    .service-item {
-        margin-bottom: 30px; /* Adjust space between services */
     }
 }
 
@@ -133,28 +138,54 @@ footer ul li a:hover {
 }
 
 /* Services */
-.service-section {
-    padding: 0 20px; /* Add some horizontal padding for spacing */
+.service-section h2 {
+    text-align: center;
 }
 
 .service-item {
     display: flex;
-    flex-direction: column; /* Stack items vertically for mobile */
-    align-items: center; /* Center items */
-    margin-bottom: 30px; /* Adjust space between services */
+    align-items: center;
+    margin-bottom: 70px; /* Increased margin for more space between services */
+}
+
+.service-item:nth-child(even) .service-content {
+    order: -1;
+    margin-left: 20px; /* Add margin for even items (text on left) */
+}
+
+.service-item:nth-child(odd) .service-content {
+    margin-right: 10px; /* Reduce margin for odd items (text on right) */
 }
 
 .service-item img {
-    width: 100%; /* Set image to full width */
-    height: auto; /* Maintain aspect ratio */
-    margin-bottom: 10px; /* Space below the image */
+    width: 50%;
+    height: auto;
+    margin-right: 20px; /* Keep margin-right for even items */
+    border-radius: 15px;
 }
 
 .service-content {
-    width: 100%; /* Full width for mobile */
-    padding: 0; /* Remove padding for full width */
-    text-align: center; /* Center text inside the service content */
+    width: 50%;
+    padding: 0 20px; /* Add some padding */
 }
+
+.service-content h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.service-content ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.service-content ul li {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #555;
+}
+
 /* ---- contact.html ---- */
 
 /* General Link Styles */
