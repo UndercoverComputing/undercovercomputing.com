@@ -3,8 +3,6 @@
 
 @import 'jekyll-theme-cayman';
 
-/* ---- index.html ---- */
-
 /* Header */
 .site-nav {
     display: flex;
@@ -16,6 +14,71 @@
     text-decoration: none;
     color: black;
 }
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    color: #000;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+/* Footer Styles */
+footer p {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+footer ul li a {
+    color: #000;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer ul li a:hover {
+    color: #00bbff;
+    text-decoration: underline;
+}
+
+/* Media Queries for smaller screens */
+@media screen and (max-width: 768px) {
+    .service-item {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-item img,
+    .service-content {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .service-content {
+        order: -1;
+    }
+}
+
+/* ---- index.html ---- */
 
 /* Body */
 .welcome-section {
@@ -67,69 +130,6 @@
     font-size: 16px;
     margin-bottom: 10px;
     color: #555;
-}
-
-/* Media Queries for smaller screens */
-@media screen and (max-width: 768px) {
-    .service-item {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .service-item img,
-    .service-content {
-        width: 100%;
-        margin-right: 0;
-    }
-
-    .service-content {
-        order: -1;
-    }
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 20px 0;
-    color: #000;
-}
-
-footer ul {
-    list-style: none;
-    padding: 0;
-}
-
-footer ul li {
-    display: inline;
-    margin: 0 10px;
-}
-
-/* Footer Styles */
-footer p {
-    margin-bottom: 10px;
-    font-size: 1.2em;
-}
-
-footer ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-footer ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-footer ul li a {
-    color: #000;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-footer ul li a:hover {
-    color: #00bbff;
-    text-decoration: underline;
 }
 
 /* ---- contact.html ---- */
