@@ -3,6 +3,11 @@
 
 @import 'jekyll-theme-cayman';
 
+a {
+    text-decoration: none; // Remove underline from all links
+    color: inherit; // Inherit color from parent element
+}
+
 h2 {
     font-weight: bold;
 }
@@ -16,8 +21,8 @@ h2 {
 }
 
 .nav-link {
-    text-decoration: none;
-    color: black; // Default color
+    text-decoration: none; // Remove underline
+    color: black !important; // Set default color to black, using !important if necessary
     transition: color 0.3s ease; // Smooth transition effect
 
     // Change color to white on hover
