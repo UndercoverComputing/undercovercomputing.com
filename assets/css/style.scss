@@ -4,8 +4,8 @@
 @import 'jekyll-theme-cayman';
 
 a {
-    text-decoration: none; // Remove underline from all links
-    color: black; // Set default color to black
+    text-decoration: none;
+    color: black;
 }
 
 h2 {
@@ -33,20 +33,18 @@ img.project-name {
 .site-nav {
     display: flex;
     justify-content: center;
-    gap: 2rem; /* Space between navigation links */
+    gap: 2rem;
 }
 
-/* Specific styles for .nav-link */
 .nav-link:link,
 .nav-link:visited {
-    color: #000000; /* Set default color to black for nav links */
-    text-decoration: none; /* Ensure no underline */
-    transition: color 0.3s ease; /* Smooth transition for hover effect */
+    color: #000000;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
-/* Hover effect for .nav-link */
 .nav-link:hover {
-    color: white; /* Change color to white on hover */
+    color: white;
 }
 
 /* Footer */
@@ -123,22 +121,22 @@ footer ul li a:hover {
 .service-item {
     display: flex;
     align-items: center;
-    margin-bottom: 70px; /* Increased margin for more space between services */
+    margin-bottom: 70px;
 }
 
 .service-item:nth-child(even) .service-content {
     order: -1;
-    margin-left: 20px; /* Add margin for even items (text on left) */
+    margin-left: 20px; /* (text on left) */
 }
 
 .service-item:nth-child(odd) .service-content {
-    margin-right: 10px; /* Reduce margin for odd items (text on right) */
+    margin-right: 10px; /* (text on right) */
 }
 
 .service-item img {
     width: 50%;
     height: auto;
-    margin-right: 20px; /* Keep margin-right for even items */
+    margin-right: 20px;
     border-radius: 15px;
 }
 
@@ -167,11 +165,10 @@ footer ul li a:hover {
 
 /* General Link Styles */
 a:link, a:visited {
-  color: #007bff; /* Default link color */
-  text-decoration: none; /* Remove underline */
+  color: #007bff;
+  text-decoration: none;
 }
 
-/* Button Styles for Specific Link */
 a#email-button {
   background-color: #007bff;
   color: white;
@@ -182,18 +179,17 @@ a#email-button {
   transition: background-color 0.3s ease;
 }
 
-/* Hover and Active Styles for the Button */
 a#email-button:hover, a#email-button:active {
   background-color: #0056b3;
 }
 
 /* Center the content */
 .contact {
-    display: flex;                 /* Use Flexbox for layout */
-    flex-direction: column;       /* Stack children vertically */
-    justify-content: center;      /* Center children vertically */
-    align-items: center;          /* Center children horizontally */
-    text-align: center;           /* Center text inside the div */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 /* Advertisement Images */
@@ -202,7 +198,7 @@ a#email-button:hover, a#email-button:active {
     justify-content: center;
     align-items: center;
     position: relative;
-    height: 600px; /* Adjust this as needed for your image height */
+    height: 600px;
 }
 
 .slider img {
