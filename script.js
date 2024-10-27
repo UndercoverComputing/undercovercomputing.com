@@ -65,6 +65,7 @@ window.fbAsyncInit = function() {
 }(document, 'script', 'facebook-jssdk'));
 
 // Scroll Animation
+// script.js
 document.addEventListener("DOMContentLoaded", () => {
   const fadeInElements = document.querySelectorAll(".fade-in");
 
