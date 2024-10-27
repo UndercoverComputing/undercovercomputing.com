@@ -36,15 +36,15 @@ img.project-name {
     gap: 2rem; /* Space between navigation links */
 }
 
-/* Target only .nav-link elements for unvisited and visited states */
+/* Specific styles for .nav-link */
 .nav-link:link,
 .nav-link:visited {
-    color: #000000; /* Set default color to black */
-    text-decoration: none; /* Remove underline */
+    color: #000000; /* Set default color to black for nav links */
+    text-decoration: none; /* Ensure no underline */
     transition: color 0.3s ease; /* Smooth transition for hover effect */
 }
 
-/* Hover effect for .nav-link elements */
+/* Hover effect for .nav-link */
 .nav-link:hover {
     color: white; /* Change color to white on hover */
 }
