@@ -3,11 +3,6 @@
 
 @import 'jekyll-theme-cayman';
 
-html, body {
-    height: 100%; /* Ensure the body takes the full height of the viewport */
-    margin: 0;    /* Remove default margin */
-}
-
 a {
     text-decoration: none; // Remove underline from all links
     color: inherit; // Inherit color from parent element
@@ -26,7 +21,7 @@ h2 {
 }
 
 .nav-link {
-    text-decoration: none; // Remove the underline
+    text-decoration: none; // Remove underline
     color: black; // Set default color to black
     transition: color 0.3s ease; // Smooth transition effect
 
@@ -187,7 +182,6 @@ a#email-button:hover, a#email-button:active {
     flex-direction: column;       /* Stack children vertically */
     justify-content: center;      /* Center children vertically */
     align-items: center;          /* Center children horizontally */
-    height: 100vh;                /* Full height of the viewport */
     text-align: center;           /* Center text inside the div */
 }
 
