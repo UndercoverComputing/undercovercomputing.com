@@ -3,6 +3,11 @@
 
 @import 'jekyll-theme-cayman';
 
+html, body {
+    height: 100%; /* Ensure the body takes the full height of the viewport */
+    margin: 0;    /* Remove default margin */
+}
+
 a {
     text-decoration: none; // Remove underline from all links
     color: inherit; // Inherit color from parent element
@@ -178,12 +183,12 @@ a#email-button:hover, a#email-button:active {
 
 /* Center the content */
 .contact {
-    display: flex;             /* Enable flexbox layout */
-    flex-direction: column;    /* Stack children vertically */
-    align-items: center;      /* Center items horizontally */
-    justify-content: center;   /* Center items vertically */
-    text-align: center;       /* Center text inside the elements */
-    height: 100vh;            /* Optional: Full height of the viewport */
+    display: flex;                 /* Use Flexbox for layout */
+    flex-direction: column;       /* Stack children vertically */
+    justify-content: center;      /* Center children vertically */
+    align-items: center;          /* Center children horizontally */
+    height: 100vh;                /* Full height of the viewport */
+    text-align: center;           /* Center text inside the div */
 }
 
 /* Advertisement Images */
