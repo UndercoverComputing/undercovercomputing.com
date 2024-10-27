@@ -65,9 +65,8 @@ window.fbAsyncInit = function() {
 }(document, 'script', 'facebook-jssdk'));
 
 // Scroll Animation
-// script.js
 document.addEventListener("DOMContentLoaded", () => {
-  const fadeInElements = document.querySelectorAll(".fade-in");
+  const fadeInContainers = document.querySelectorAll(".fade-in-container");
 
   const observerOptions = {
     threshold: 0.1 // Trigger when 10% of the element is visible
@@ -82,5 +81,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }, observerOptions);
 
-  fadeInElements.forEach(element => observer.observe(element));
+  fadeInContainers.forEach(container => {
+    const elements = container.children;
+    Array.from(elements).forEach(element => observer.observe(element));
+  });
 });
