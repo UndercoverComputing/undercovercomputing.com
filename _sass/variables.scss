@@ -3,21 +3,21 @@ $large-breakpoint: 64em !default;
 $medium-breakpoint: 42em !default;
 
 // Headers
-$header-heading-color: #fff !default;
-$header-bg-color: #159957 !default;
-$header-bg-color-secondary: #155799 !default;
+$header-heading-color: #fff !default; // Keep white for contrast
+$header-bg-color: #007bff !default; // Primary blue
+$header-bg-color-secondary: #0056b3 !default; // Darker blue for gradient
 
 // Text
-$section-headings-color: #159957 !default;
-$body-text-color: #606c71 !default;
-$body-link-color: #1e6bb8 !default;
-$blockquote-text-color: #819198 !default;
+$section-headings-color: #007bff !default; // Primary blue for headings
+$body-text-color: #333 !default; // Dark grey for better readability
+$body-link-color: #1e6bb8 !default; // Lighter blue for links
+$blockquote-text-color: #819198 !default; // Keep this as is
 
 // Code
-$code-bg-color: #f3f6fa !default;
-$code-text-color: #567482 !default;
+$code-bg-color: #f3f6fa !default; // Light background for code
+$code-text-color: #567482 !default; // Keep this as is
 
 // Borders
-$border-color: #dce6f0 !default;
-$table-border-color: #e9ebec !default;
-$hr-border-color: #eff0f1 !default;
+$border-color: #dce6f0 !default; // Light border color
+$table-border-color: #e9ebec !default; // Keep this as is
+$hr-border-color: #eff0f1 !default; // Keep this as is
