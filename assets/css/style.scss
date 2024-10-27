@@ -13,8 +13,10 @@ h2 {
 }
 
 /* Header */
-.project-name img {
-    max-width: 100%;
+img.project-name {
+    max-width: 50%;
+    margin-bottom: -70px;
+    margin-top: -100px;
 }
     
 .site-nav {
