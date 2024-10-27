@@ -33,30 +33,20 @@ img.project-name {
 .site-nav {
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    gap: 2rem; /* Space between navigation links */
 }
 
-.nav-link {
-    text-decoration: none;
-    color: black; /* Set default color to black */
-    transition: color 0.3s ease; /* Smooth transition effect */
+/* Target only .nav-link elements for unvisited and visited states */
+.nav-link:link,
+.nav-link:visited {
+    color: #000000; /* Set default color to black */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
 }
 
-.nav-link u {
-    color: inherit; /* Ensure <u> inside .nav-link inherits black color */
-}
-
+/* Hover effect for .nav-link elements */
 .nav-link:hover {
-    color: white; /* Hover color for link */
-}
-
-.nav-link:hover u {
-    color: inherit; /* Make sure <u> inherits white hover color */
-}
-
-// Optional: Ensure <u> elements also inherit the color from .nav-link
-u.nav-link {
-    color: inherit;
+    color: white; /* Change color to white on hover */
 }
 
 /* Footer */
