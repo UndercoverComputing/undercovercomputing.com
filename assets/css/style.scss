@@ -183,6 +183,17 @@ a#email-button:hover, a#email-button:active {
   background-color: #0056b3;
 }
 
+a#email-link {
+  color: #007bff; /* Link color */
+  text-decoration: underline; /* Underline the link */
+  display: inline; /* Display inline */
+  transition: color 0.3s ease; /* Transition for hover effect */
+}
+
+a#email-link:hover {
+  color: #0056b3; /* Darker color on hover */
+}
+
 /* Center the content */
 .contact {
     display: flex;
