@@ -210,6 +210,7 @@ a#email-link:hover {
     align-items: center;
     position: relative;
     height: 600px;
+    overflow: hidden; /* Prevent overflow */
 }
 
 .slider img {
@@ -217,14 +218,20 @@ a#email-link:hover {
     max-height: 100%;
     position: absolute;
     transition: opacity 0.5s ease; /* Add transition for smooth fading */
+    opacity: 0; /* Start with all images hidden */
+}
+
+.slider img:first-child {
+    opacity: 1; /* Show the first image */
 }
 
 .indicators {
     position: absolute;
-    top: 20px; /* Adjust this value to position it */
+    top: 10px; /* Adjust to position above the images */
     display: flex;
     justify-content: center;
     width: 100%;
+    z-index: 10; /* Ensure indicators are above images */
 }
 
 .indicator {
