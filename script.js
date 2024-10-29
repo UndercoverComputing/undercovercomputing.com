@@ -20,12 +20,17 @@ const images = document.querySelectorAll('.slider img');
 const indicators = document.querySelectorAll('.indicator');
 const totalImages = images.length;
 
-function showNextImage() {
+function showImage(index) {
     images[currentIndex].style.opacity = '0'; // Fade out current image
     indicators[currentIndex].classList.remove('active'); // Remove active class from current indicator
-    currentIndex = (currentIndex + 1) % totalImages;
-    images[currentIndex].style.opacity = '1'; // Fade in next image
+    currentIndex = index; // Update current index
+    images[currentIndex].style.opacity = '1'; // Fade in new image
     indicators[currentIndex].classList.add('active'); // Add active class to new indicator
+}
+
+function showNextImage() {
+    const nextIndex = (currentIndex + 1) % totalImages;
+    showImage(nextIndex);
 }
 
 // Initialize the slider by hiding all images except the first one
@@ -36,16 +41,13 @@ images.forEach((img, index) => {
 // Automatically change the image every 5 seconds
 setInterval(showNextImage, 5000);
 
-// Smooth scrolling for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
+// Add click event to indicators
+indicators.forEach((indicator, index) => {
+    indicator.addEventListener('click', () => {
+        showImage(index); // Show the image corresponding to the clicked indicator
     });
 });
+
 
 // Facebook stuff
 window.fbAsyncInit = function() {
