@@ -232,9 +232,10 @@ a#email-link:hover {
     opacity: 1; /* Show the first image */
 }
 
+/* Indicator Styles */
 .indicators {
     position: absolute;
-    top: -50px; /* Position above the images */
+    bottom: 20px; /* Move indicators to below the images */
     display: flex;
     justify-content: center;
     width: 100%;
@@ -242,15 +243,16 @@ a#email-link:hover {
 }
 
 .indicator {
-    width: 12px;
-    height: 12px;
-    background-color: grey;
+    width: 16px; /* Increased size */
+    height: 16px;
+    background-color: #ccc; /* Lighter grey for better visibility */
     border-radius: 50%;
-    margin: 0 5px;
+    margin: 0 8px; /* Spacing between indicators */
     cursor: pointer; /* Show pointer cursor */
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .indicator.active {
-    background-color: black;
+    background-color: #007bff; /* Highlighted color for active indicator */
+    transform: scale(1.2); /* Slightly enlarge active indicator */
 }
