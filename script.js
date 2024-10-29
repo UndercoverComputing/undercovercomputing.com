@@ -17,20 +17,23 @@ function copyEmail(event) {
 // Simple Image Slider
 let currentIndex = 0;
 const images = document.querySelectorAll('.slider img');
+const indicators = document.querySelectorAll('.indicator');
 const totalImages = images.length;
 
 function showNextImage() {
-    images[currentIndex].style.display = 'none';
+    images[currentIndex].style.opacity = '0'; // Fade out current image
+    indicators[currentIndex].classList.remove('active'); // Remove active class from current indicator
     currentIndex = (currentIndex + 1) % totalImages;
-    images[currentIndex].style.display = 'block';
+    images[currentIndex].style.opacity = '1'; // Fade in next image
+    indicators[currentIndex].classList.add('active'); // Add active class to new indicator
 }
 
 // Initialize the slider by hiding all images except the first one
 images.forEach((img, index) => {
-    if (index !== 0) img.style.display = 'none';
+    img.style.opacity = index === 0 ? '1' : '0'; // Set initial opacity
 });
 
-// Automatically change the image every 3 seconds
+// Automatically change the image every 5 seconds
 setInterval(showNextImage, 5000);
 
 // Smooth scrolling for anchor links
