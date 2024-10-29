@@ -204,6 +204,10 @@ a#email-link:hover {
 }
 
 /* Advertisement Images */
+.ads {
+    position: relative; /* Allow absolute positioning within this section */
+}
+
 .slider {
     display: flex;
     justify-content: center;
@@ -227,7 +231,7 @@ a#email-link:hover {
 
 .indicators {
     position: absolute;
-    top: 10px; /* Adjust to position above the images */
+    top: -30px; /* Position above the images */
     display: flex;
     justify-content: center;
     width: 100%;
@@ -240,7 +244,7 @@ a#email-link:hover {
     background-color: grey;
     border-radius: 50%;
     margin: 0 5px;
-    cursor: pointer;
+    cursor: pointer; /* Show pointer cursor */
     transition: background-color 0.3s ease;
 }
 
