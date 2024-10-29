@@ -217,7 +217,8 @@ a#email-link:hover {
     align-items: center;
     position: relative;
     height: 600px;
-    overflow: hidden; /* Prevent overflow */
+    overflow: visible; /* Ensure any positioned elements are not cut off */
+    padding-top: 20px; /* Add space above the images */
 }
 
 .slider img {
