@@ -64,21 +64,9 @@ footer ul li {
     margin: 0 10px;
 }
 
-/* Footer Styles */
 footer p {
     margin-bottom: 10px;
     font-size: 1.2em;
-}
-
-footer ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-footer ul li {
-    display: inline;
-    margin: 0 15px;
 }
 
 footer ul li a {
@@ -100,7 +88,6 @@ footer ul li a:hover {
     
     .service-content {
         width: 100%;
-        order: -1;
     }
 }
 
@@ -120,28 +107,21 @@ footer ul li a:hover {
 
 .service-item {
     display: flex;
-    align-items: center;
+    flex-direction: column; /* Arrange text above image */
+    align-items: center; /* Center items horizontally */
     margin-bottom: 70px;
-}
-
-.service-item:nth-child(even) .service-content {
-    order: -1;
-    margin-left: 20px; /* (text on left) */
-}
-
-.service-item:nth-child(odd) .service-content {
-    margin-right: 10px; /* (text on right) */
+    text-align: center;
 }
 
 .service-item img {
-    width: 50%;
+    width: 80%; /* Adjust as needed */
     height: auto;
-    margin-right: 20px;
+    margin-top: 20px; /* Adds space between text and image */
     border-radius: 15px;
 }
 
 .service-content {
-    width: 50%;
+    width: 100%;
     padding: 0 20px;
 }
 
@@ -187,14 +167,14 @@ a#email-button:active {
 }
 
 a#email-link {
-    color: #007bff; /* Link color */
-    text-decoration: underline; /* Underline the link */
-    display: inline; /* Display inline */
-    transition: color 0.3s ease; /* Transition for hover effect */
+    color: #007bff;
+    text-decoration: underline;
+    display: inline;
+    transition: color 0.3s ease;
 }
 
 a#email-link:hover {
-    color: #0056b3; /* Darker color on hover */
+    color: #0056b3;
 }
 
 /* Center the content */
@@ -208,7 +188,7 @@ a#email-link:hover {
 
 /* Advertisement Images */
 .ads {
-    position: relative; /* Allow absolute positioning within this section */
+    position: relative;
 }
 
 .slider {
@@ -217,7 +197,7 @@ a#email-link:hover {
     align-items: center;
     position: relative;
     height: 600px;
-    overflow: visible; /* Ensure any positioned elements are not cut off */
+    overflow: visible;
     padding-bottom: 60px;
 }
 
@@ -225,35 +205,35 @@ a#email-link:hover {
     max-width: 100%;
     max-height: 100%;
     position: absolute;
-    transition: opacity 0.5s ease; /* Add transition for smooth fading */
-    opacity: 0; /* Start with all images hidden */
+    transition: opacity 0.5s ease;
+    opacity: 0;
 }
 
 .slider img:first-child {
-    opacity: 1; /* Show the first image */
+    opacity: 1;
 }
 
 /* Indicator Styles */
 .indicators {
     position: absolute;
-    top: -60px; /* Move indicators to below the images */
+    top: -60px;
     display: flex;
     justify-content: center;
     width: 100%;
-    z-index: 10; /* Ensure indicators are above images */
+    z-index: 10;
 }
 
 .indicator {
-    width: 16px; /* Increased size */
+    width: 16px;
     height: 16px;
-    background-color: #ccc; /* Lighter grey for better visibility */
+    background-color: #ccc;
     border-radius: 50%;
-    margin: 0 8px; /* Spacing between indicators */
-    cursor: pointer; /* Show pointer cursor */
+    margin: 0 8px;
+    cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .indicator.active {
-    background-color: #007bff; /* Highlighted color for active indicator */
-    transform: scale(1.2); /* Slightly enlarge active indicator */
+    background-color: #007bff;
+    transform: scale(1.2);
 }
