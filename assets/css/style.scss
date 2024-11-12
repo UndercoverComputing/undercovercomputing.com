@@ -1,6 +1,7 @@
 ---
 ---
 
+/* Global Styles */
 @import 'jekyll-theme-cayman';
 
 a {
@@ -80,48 +81,32 @@ footer ul li a:hover {
     text-decoration: underline;
 }
 
-/* Media Queries for smaller screens */
-@media screen and (max-width: 768px) {
-    .service-item img {
-        width: 80%;
-    }
-    
-    .service-content {
-        width: 100%;
-    }
-}
+/* ---- Services Section ---- */
 
-/* ---- index.html ---- */
-
-/* Body */
-.welcome-section {
-    padding: 50px;
-    text-align: center;
-    background-color: #fff;
-}
-
-/* Services */
 .service-section h2 {
     text-align: center;
+    margin-bottom: 50px;
 }
 
 .service-item {
     display: flex;
-    flex-direction: column; /* Arrange text above image */
-    align-items: center; /* Center items horizontally */
-    margin-bottom: 70px;
+    flex-direction: column; /* Stack content above the image */
+    align-items: center;
     text-align: center;
+    margin-bottom: 50px;
 }
 
 .service-item img {
-    width: 80%; /* Adjust as needed */
+    width: 80%;
+    max-width: 500px; /* Limit image size */
     height: auto;
-    margin-top: 20px; /* Adds space between text and image */
+    margin-top: 20px; /* Space between text and image */
     border-radius: 15px;
 }
 
 .service-content {
     width: 100%;
+    max-width: 600px; /* Optional max width for text content */
     padding: 0 20px;
 }
 
@@ -142,40 +127,18 @@ footer ul li a:hover {
     color: #555;
 }
 
-/* ---- contact.html ---- */
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .service-item img {
+        width: 100%;
+    }
 
-/* General Link Styles */
-a:link,
-a:visited {
-    color: #007bff;
-    text-decoration: none;
+    .service-content {
+        width: 100%;
+    }
 }
 
-a#email-button {
-    background-color: #007bff;
-    color: white;
-    padding: 14px 25px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    transition: background-color 0.3s ease;
-}
-
-a#email-button:hover,
-a#email-button:active {
-    background-color: #0056b3;
-}
-
-a#email-link {
-    color: #007bff;
-    text-decoration: underline;
-    display: inline;
-    transition: color 0.3s ease;
-}
-
-a#email-link:hover {
-    color: #0056b3;
-}
+/* ---- Additional Styles ---- */
 
 /* Center the content */
 .contact {
@@ -210,30 +173,4 @@ a#email-link:hover {
 }
 
 .slider img:first-child {
-    opacity: 1;
-}
-
-/* Indicator Styles */
-.indicators {
-    position: absolute;
-    top: -60px;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    z-index: 10;
-}
-
-.indicator {
-    width: 16px;
-    height: 16px;
-    background-color: #ccc;
-    border-radius: 50%;
-    margin: 0 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.indicator.active {
-    background-color: #007bff;
-    transform: scale(1.2);
-}
+    opacity
