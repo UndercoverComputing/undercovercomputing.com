@@ -94,12 +94,12 @@ footer ul li a:hover {
 
 /* Media Queries for smaller screens */
 @media screen and (max-width: 768px) {
-    .service-item img,
+    .service-item img {
+        width: 80%;
+    }
+    
     .service-content {
         width: 100%;
-    }
-
-    .service-content {
         order: -1;
     }
 }
