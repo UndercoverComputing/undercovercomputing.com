@@ -217,8 +217,7 @@ a#email-link:hover {
     align-items: center;
     position: relative;
     height: 600px;
-    overflow: visible; /* Ensure any positioned elements are not cut off */
-    padding-bottom: 60px;
+    overflow: hidden; /* Prevent overflow */
 }
 
 .slider img {
@@ -236,7 +235,7 @@ a#email-link:hover {
 /* Indicator Styles */
 .indicators {
     position: absolute;
-    top: -60px; /* Move indicators to below the images */
+    bottom: 20px; /* Move indicators to below the images */
     display: flex;
     justify-content: center;
     width: 100%;
