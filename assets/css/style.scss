@@ -1,4 +1,6 @@
-/* Global Styles */
+---
+---
+
 @import 'jekyll-theme-cayman';
 
 a {
@@ -62,9 +64,21 @@ footer ul li {
     margin: 0 10px;
 }
 
+/* Footer Styles */
 footer p {
     margin-bottom: 10px;
     font-size: 1.2em;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer ul li {
+    display: inline;
+    margin: 0 15px;
 }
 
 footer ul li a {
@@ -78,32 +92,56 @@ footer ul li a:hover {
     text-decoration: underline;
 }
 
-/* ---- Services Section ---- */
+/* Media Queries for smaller screens */
+@media screen and (max-width: 768px) {
+    .service-item img {
+        width: 80%;
+    }
+    
+    .service-content {
+        width: 100%;
+        order: -1;
+    }
+}
 
+/* ---- index.html ---- */
+
+/* Body */
+.welcome-section {
+    padding: 50px;
+    text-align: center;
+    background-color: #fff;
+}
+
+/* Services */
 .service-section h2 {
     text-align: center;
-    margin-bottom: 50px;
 }
 
 .service-item {
     display: flex;
-    flex-direction: column; /* Stack content above the image */
     align-items: center;
-    text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 70px;
+}
+
+.service-item:nth-child(even) .service-content {
+    order: -1;
+    margin-left: 20px; /* (text on left) */
+}
+
+.service-item:nth-child(odd) .service-content {
+    margin-right: 10px; /* (text on right) */
 }
 
 .service-item img {
-    width: 80%;
-    max-width: 500px; /* Limit image size */
+    width: 50%;
     height: auto;
-    margin-top: 20px; /* Space between text and image */
+    margin-right: 20px;
     border-radius: 15px;
 }
 
 .service-content {
-    width: 100%;
-    max-width: 600px; /* Optional max width for text content */
+    width: 50%;
     padding: 0 20px;
 }
 
@@ -124,25 +162,40 @@ footer ul li a:hover {
     color: #555;
 }
 
-/* Media Queries 
-@media screen and (max-width: 768px) {
-    .service-item img {
-        width: 100%;
-    }
+/* ---- contact.html ---- */
 
-    .service-content {
-        width: 100%;
-    }
-} */
-
-/* New Services Section for Mobile */
-@media screen and (max-width: 768px) {
-    .service-item {
-        flex-direction: column-reverse; /* Stack image below the text */
-    }
+/* General Link Styles */
+a:link,
+a:visited {
+    color: #007bff;
+    text-decoration: none;
 }
 
-/* ---- Additional Styles ---- */
+a#email-button {
+    background-color: #007bff;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+a#email-button:hover,
+a#email-button:active {
+    background-color: #0056b3;
+}
+
+a#email-link {
+    color: #007bff; /* Link color */
+    text-decoration: underline; /* Underline the link */
+    display: inline; /* Display inline */
+    transition: color 0.3s ease; /* Transition for hover effect */
+}
+
+a#email-link:hover {
+    color: #0056b3; /* Darker color on hover */
+}
 
 /* Center the content */
 .contact {
@@ -155,7 +208,7 @@ footer ul li a:hover {
 
 /* Advertisement Images */
 .ads {
-    position: relative;
+    position: relative; /* Allow absolute positioning within this section */
 }
 
 .slider {
@@ -164,7 +217,7 @@ footer ul li a:hover {
     align-items: center;
     position: relative;
     height: 600px;
-    overflow: visible;
+    overflow: visible; /* Ensure any positioned elements are not cut off */
     padding-bottom: 60px;
 }
 
@@ -172,10 +225,35 @@ footer ul li a:hover {
     max-width: 100%;
     max-height: 100%;
     position: absolute;
-    transition: opacity 0.5s ease;
-    opacity: 0;
+    transition: opacity 0.5s ease; /* Add transition for smooth fading */
+    opacity: 0; /* Start with all images hidden */
 }
 
 .slider img:first-child {
-    opacity
+    opacity: 1; /* Show the first image */
+}
+
+/* Indicator Styles */
+.indicators {
+    position: absolute;
+    top: -60px; /* Move indicators to below the images */
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    z-index: 10; /* Ensure indicators are above images */
+}
+
+.indicator {
+    width: 16px; /* Increased size */
+    height: 16px;
+    background-color: #ccc; /* Lighter grey for better visibility */
+    border-radius: 50%;
+    margin: 0 8px; /* Spacing between indicators */
+    cursor: pointer; /* Show pointer cursor */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.indicator.active {
+    background-color: #007bff; /* Highlighted color for active indicator */
+    transform: scale(1.2); /* Slightly enlarge active indicator */
 }
