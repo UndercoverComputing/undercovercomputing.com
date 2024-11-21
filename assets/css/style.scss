@@ -94,13 +94,19 @@ footer ul li a:hover {
 
 /* Media Queries for smaller screens */
 @media screen and (max-width: 768px) {
+    /* Ensure image goes above the text on mobile */
+    .service-item {
+        flex-direction: column; /* Stack image and text vertically */
+        align-items: center; /* Center them horizontally */
+    }
+
     .service-item img {
-        width: 80%;
+        width: 80%; /* Set image width to 80% */
+        margin-bottom: 20px; /* Add space between image and text */
     }
     
     .service-content {
-        width: 100%;
-        order: -1;
+        width: 100%; /* Ensure the text section takes up full width */
     }
 }
 
