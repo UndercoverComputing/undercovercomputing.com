@@ -96,20 +96,32 @@ footer ul li a:hover {
 @media screen and (max-width: 768px) {
     /* Stack the image and text vertically and center them */
     .service-item {
-        flex-direction: column; /* Stack the image and text vertically */
-        align-items: center; /* Center the content horizontally */
-        text-align: center; /* Center the text */
-        padding: 0; /* Remove any default padding */
+        display: flex;             /* Ensure it's still a flex container */
+        flex-direction: column;    /* Stack the image and text vertically */
+        align-items: center;       /* Center them horizontally */
+        text-align: center;        /* Center the text */
+        padding: 0;                /* Remove any default padding */
+        margin: 0;                 /* Remove any extra margin */
     }
 
+    /* Ensure image width is 100% on mobile */
     .service-item img {
-        width: 100%; /* Set image width to 100% of available space */
-        margin-bottom: 20px; /* Add space between image and text */
+        width: 100%;               /* Set image width to 100% of available space */
+        margin-bottom: 20px;       /* Add space between image and text */
     }
-    
+
+    /* Ensure service content width is 100% and text is centered */
     .service-content {
-        width: 100%; /* Ensure the text section takes full width */
-        padding: 0 10px; /* Optional: reduce padding to prevent text from being too far from edges */
+        width: 100%;               /* Make sure the text section uses full width */
+        padding: 0 15px;           /* Optional: Adjust text padding for consistency */
+        text-align: center;        /* Center the text */
+    }
+
+    /* Optional: Fix margin issues on specific elements */
+    .service-item:nth-child(odd) .service-content,
+    .service-item:nth-child(even) .service-content {
+        margin-left: 0;
+        margin-right: 0; /* Remove side margins that could cause text shift */
     }
 }
 
