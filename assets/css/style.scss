@@ -94,22 +94,23 @@ footer ul li a:hover {
 
 /* Media Queries for smaller screens */
 @media screen and (max-width: 768px) {
-    /* Ensure image goes above the text on mobile */
+    /* Ensure the image is above the text and center them */
     .service-item {
-        flex-direction: column; /* Stack image and text vertically */
+        flex-direction: column; /* Stack the image and text vertically */
         align-items: center; /* Center them horizontally */
+        text-align: center; /* Center the text */
     }
 
     .service-item img {
         width: 80%; /* Set image width to 80% */
-        margin-bottom: 20px; /* Add space between image and text */
+        margin-bottom: 20px; /* Add space between the image and text */
     }
     
     .service-content {
-        width: 100%; /* Ensure the text section takes up full width */
+        width: 100%; /* Ensure the text section takes full width */
+        padding: 0 20px; /* Optional: Keep padding for text spacing */
     }
 }
-
 /* ---- index.html ---- */
 
 /* Body */
