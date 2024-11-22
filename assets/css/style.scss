@@ -92,39 +92,6 @@ footer ul li a:hover {
     text-decoration: underline;
 }
 
-/* Media Queries for smaller screens */
-@media screen and (max-width: 768px) {
-    /* Stack the image and text vertically and center them */
-    .service-item {
-        display: flex;             /* Ensure it's still a flex container */
-        flex-direction: column;    /* Stack the image and text vertically */
-        align-items: center;       /* Center them horizontally */
-        text-align: center;        /* Center the text */
-        padding: 0;                /* Remove any default padding */
-        margin: 0;                 /* Remove any extra margin */
-    }
-
-    /* Ensure image width is 100% on mobile */
-    .service-item img {
-        width: 100%;               /* Set image width to 100% of available space */
-        margin-bottom: 20px;       /* Add space between image and text */
-    }
-
-    /* Ensure service content width is 100% and text is centered */
-    .service-content {
-        width: 100%;               /* Make sure the text section uses full width */
-        padding: 0 15px;           /* Optional: Adjust text padding for consistency */
-        text-align: center;        /* Center the text */
-    }
-
-    /* Optional: Fix margin issues on specific elements */
-    .service-item:nth-child(odd) .service-content,
-    .service-item:nth-child(even) .service-content {
-        margin-left: 0;
-        margin-right: 0; /* Remove side margins that could cause text shift */
-    }
-}
-
 /* ---- index.html ---- */
 
 /* Body */
@@ -135,52 +102,72 @@ footer ul li a:hover {
 }
 
 /* Services */
-.service-section h2 {
+.service-section {
     text-align: center;
+    padding: 2em;
+    background-color: #f9f9f9;
+}
+
+.service-section h2 {
+    margin-bottom: 2em;
+    font-size: 1.5em;
+}
+
+.services {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
 }
 
 .service-item {
     display: flex;
     align-items: center;
-    margin-bottom: 70px;
-}
-
-.service-item:nth-child(even) .service-content {
-    order: -1;
-    margin-left: 20px; /* (text on left) */
-}
-
-.service-item:nth-child(odd) .service-content {
-    margin-right: 10px; /* (text on right) */
+    background-color: transparent; /* Invisible box */
+    border: 1px solid #ddd; /* Optional: Adds a subtle border for clarity */
+    border-radius: 8px;
+    padding: 1em;
+    gap: 1.5em;
 }
 
 .service-item img {
-    width: 50%;
+    width: 40%; /* Adjust image size */
     height: auto;
-    margin-right: 20px;
-    border-radius: 15px;
+    border-radius: 8px;
 }
 
 .service-content {
-    width: 50%;
-    padding: 0 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers content vertically */
+    text-align: left;
 }
 
 .service-content h3 {
-    font-size: 24px;
-    margin-bottom: 15px;
-    color: #333;
+    margin-bottom: 1em;
+    font-size: 1.2em;
 }
 
 .service-content ul {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
 }
 
-.service-content ul li {
-    font-size: 16px;
-    margin-bottom: 10px;
-    color: #555;
+.service-content li {
+    margin-bottom: 0.5em;
+}
+
+/* Optional: Responsive Design */
+@media (min-width: 768px) {
+    .services {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .service-item {
+        flex: 1 1 calc(50% - 2em);
+        max-width: calc(50% - 2em);
+    }
 }
 
 /* ---- contact.html ---- */
