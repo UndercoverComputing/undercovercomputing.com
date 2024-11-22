@@ -116,17 +116,18 @@ footer ul li a:hover {
 .services {
     display: flex;
     flex-direction: column;
-    gap: 2em;
+    gap: 2em; /* Space between boxes */
 }
 
 .service-item {
     display: flex;
     align-items: center;
     background-color: transparent; /* Invisible box */
-    border: 1px solid #ddd; /* Optional: Adds a subtle border for clarity */
+    border: 1px solid transparent; /* Optional: Keeps layout integrity without being visible */
     border-radius: 8px;
     padding: 1em;
     gap: 1.5em;
+    position: relative; /* Ensures no overlap */
 }
 
 .service-item img {
@@ -157,16 +158,15 @@ footer ul li a:hover {
     margin-bottom: 0.5em;
 }
 
-/* Optional: Responsive Design */
+/* Optional: Add a hover effect */
+.service-item:hover {
+    border: 1px solid #ddd; /* Adds subtle visibility for debugging */
+}
+
+/* Responsive Design: Ensures boxes stay stacked */
 @media (min-width: 768px) {
     .services {
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-
-    .service-item {
-        flex: 1 1 calc(50% - 2em);
-        max-width: calc(50% - 2em);
+        flex-direction: column; /* Ensure vertical stacking on larger screens too */
     }
 }
 
