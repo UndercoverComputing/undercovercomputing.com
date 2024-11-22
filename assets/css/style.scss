@@ -104,70 +104,56 @@ footer ul li a:hover {
 /* Services */
 .service-section {
     text-align: center;
-    padding: 2em;
-    background-color: #f9f9f9;
-}
-
-.service-section h2 {
-    margin-bottom: 2em;
-    font-size: 1.5em;
+    padding: 20px;
 }
 
 .services {
     display: flex;
-    flex-direction: column;
-    gap: 2em; /* Space between boxes */
+    flex-direction: column; /* Stack each service vertically */
+    gap: 20px; /* Space between services */
 }
 
 .service-item {
     display: flex;
     align-items: center;
-    background-color: transparent; /* Invisible box */
-    border: 1px solid transparent; /* Optional: Keeps layout integrity without being visible */
-    border-radius: 8px;
-    padding: 1em;
-    gap: 1.5em;
-    position: relative; /* Ensures no overlap */
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .service-item img {
-    width: 40%; /* Adjust image size */
-    height: auto;
-    border-radius: 8px;
+    width: 40%; /* Adjust as needed */
+    object-fit: cover;
+    border-radius: 5px;
 }
 
 .service-content {
     flex: 1;
+    padding: 10px 20px;
+    text-align: left;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centers content vertically */
-    text-align: left;
+    justify-content: center; /* Centers text vertically */
 }
 
 .service-content h3 {
-    margin-bottom: 1em;
-    font-size: 1.2em;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    color: #333;
 }
 
 .service-content ul {
-    list-style: none;
+    margin: 0;
     padding: 0;
+    list-style-type: none;
+    color: #555;
 }
 
-.service-content li {
-    margin-bottom: 0.5em;
-}
-
-/* Optional: Add a hover effect */
-.service-item:hover {
-    border: 1px solid #ddd; /* Adds subtle visibility for debugging */
-}
-
-/* Responsive Design: Ensures boxes stay stacked */
-@media (min-width: 768px) {
-    .services {
-        flex-direction: column; /* Ensure vertical stacking on larger screens too */
-    }
+.service-content ul li {
+    margin-bottom: 5px;
 }
 
 /* ---- contact.html ---- */
