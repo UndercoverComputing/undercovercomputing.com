@@ -103,49 +103,46 @@ footer ul li a:hover {
 
 /* Services */
 .service-section {
+    padding: 20px;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
+}
+
+.services {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Add space between service items */
 }
 
 .service-item {
     display: flex;
     align-items: center; /* Center text vertically */
-    gap: 40px; /* Increase space between image and text */
-    margin: 30px 0; /* More space between sections */
-    border: 1px solid #ccc; /* Box around the entire section */
-    border-radius: 8px; /* Rounded corners for the box */
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    gap: 20px; /* Add space between image and text */
 }
 
 .service-item img {
-    flex: 0 0 160px; /* Adjust image size to 80% of previous (200px * 0.8 = 160px) */
-    height: auto;
-    border-radius: 8px; /* Optional: rounded corners for the image */
+    width: 80%; /* Make images 80% of their container width */
+    max-width: 300px; /* Optional: Limit the max size of the images */
+    border-radius: 8px; /* Optional: Add rounded corners */
 }
 
 .service-content {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Center text vertically */
-    gap: 10px; /* Spacing between text elements */
+    flex: 1; /* Allow text to take up remaining space */
 }
 
 .service-content h3 {
-    margin: 0 0 10px;
-    font-size: 1.5em; /* Adjust font size for readability */
+    margin-bottom: 10px;
+    font-size: 1.5rem;
 }
 
 .service-content ul {
-    list-style: none;
+    list-style: none; /* Remove default list styling */
     padding: 0;
     margin: 0;
 }
 
 .service-content ul li {
-    margin-bottom: 10px; /* Space between list items */
+    margin-bottom: 5px;
 }
 
 /* ---- contact.html ---- */
