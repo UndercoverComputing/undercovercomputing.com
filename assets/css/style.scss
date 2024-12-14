@@ -1,15 +1,169 @@
----
----
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-@import 'jekyll-theme-cayman';
+/* General Body Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Light background for better contrast */
+    color: #333; /* Dark text for readability */
+    line-height: 1.6;
+}
 
+/* Link Styling */
 a {
     text-decoration: none;
     color: black;
+    font-weight: 400;
 }
 
-h2 {
-    font-weight: bold;
+a:visited {
+    color: black;
+}
+
+a:hover {
+    color: #00bbff; /* Blue color on hover */
+}
+
+/* Header */
+img.project-name {
+    max-width: 30%;
+    margin-top: -20px;
+}
+
+.page-header {
+    text-align: center;
+    background-color: #157878;
+    padding: 20px;
+    color: white;
+}
+
+.project-tagline {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-top: 10px;
+}
+
+.site-nav {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 10px;
+}
+
+.nav-link:link,
+.nav-link:visited {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-weight: 700;
+}
+
+.nav-link:hover {
+    color: #00bbff;
+}
+
+/* Main Content */
+.welcome-section {
+    padding: 50px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-section h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.welcome-section p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Services Section */
+.service-section {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.services {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.service-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.service-item img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 20px;
+}
+
+.service-content {
+    flex: 1;
+    text-align: left;
+}
+
+.service-content h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.service-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.service-content ul li {
+    margin-bottom: 5px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    color: #000;
+    background-color: #f9f9f9;
+    border-top: 2px solid #ddd;
+}
+
+footer p {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+footer ul li a {
+    color: #000;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer ul li a:hover {
+    color: #00bbff;
+    text-decoration: underline;
 }
 
 /* Fade Animations */
@@ -24,158 +178,44 @@ h2 {
     transform: translateY(0);
 }
 
-/* Header */
-img.project-name {
-    max-width: 30%;
-    margin-top: -20px;
-}
-
-.site-nav {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-}
-
-.nav-link:link,
-.nav-link:visited {
-    color: #000000;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.nav-link:hover {
-    color: white;
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 20px 0;
-    color: #000;
-}
-
-footer ul {
-    list-style: none;
-    padding: 0;
-}
-
-footer ul li {
-    display: inline;
-    margin: 0 10px;
-}
-
-/* Footer Styles */
-footer p {
-    margin-bottom: 10px;
-    font-size: 1.2em;
-}
-
-footer ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-footer ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-footer ul li a {
-    color: #000;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-footer ul li a:hover {
-    color: #00bbff;
-    text-decoration: underline;
-}
-
-/* ---- index.html ---- */
-
-/* Body */
-.welcome-section {
-    padding: 50px;
-    text-align: center;
-    background-color: #fff;
-}
-
-/* Services */
-/* Base layout for larger screens */
-.service-section {
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.services {
-    display: flex;
-    flex-direction: column;
-    gap: 30px; /* Add space between service items */
-}
-
-.service-item {
-    display: flex;
-    align-items: center; /* Center text vertically */
-    gap: 20px; /* Add space between image and text */
-}
-
-.service-item img {
-    width: 100%; /* Make images 80% of their container width */
-    max-width: 400px; /* Optional: Limit the max size of the images */
-    border-radius: 20px; /* Optional: Add rounded corners */
-}
-
-.service-content {
-    flex: 1; /* Allow text to take up remaining space */
-    text-align: left; /* Align text to the left by default */
-}
-
-.service-content h3 {
-    margin-bottom: 10px;
-    font-size: 1.5rem;
-}
-
-.service-content ul {
-    list-style: none; /* Remove default list styling */
-    padding: 0;
-    margin: 0;
-}
-
-.service-content ul li {
-    margin-bottom: 5px;
-}
-
-/* Responsive layout for smaller screens */
+/* Responsive Design */
 @media (max-width: 800px) {
     .service-item {
-        flex-direction: column; /* Stack image and text vertically */
-        align-items: center; /* Center the content */
+        flex-direction: column;
+        align-items: center;
     }
 
     .service-item img {
-        width: 90%; /* Slightly increase image width for small screens */
-        max-width: 100%; /* Remove max-width limitation */
+        width: 90%;
+        max-width: 100%;
     }
 
     .service-content {
-        text-align: center; /* Center-align text for mobile */
+        text-align: center;
     }
+
     img.project-name {
-    max-width: 100%;
-    margin-top: -20px;
-}
-}
-/* ---- contact.html ---- */
-
-/* General Link Styles */
-a:link,
-a:visited {
-    color: #007bff;
-    text-decoration: none;
+        max-width: 100%;
+    }
 }
 
+/* Custom Heading Styles */
+h1, h2, h3 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    color: #333;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* Links for contact and email sections */
 a#email-button {
     background-color: #007bff;
     color: white;
@@ -192,73 +232,31 @@ a#email-button:active {
 }
 
 a#email-link {
-    color: #007bff; /* Link color */
-    text-decoration: underline; /* Underline the link */
-    display: inline; /* Display inline */
-    transition: color 0.3s ease; /* Transition for hover effect */
+    color: #007bff;
+    text-decoration: underline;
+    display: inline;
+    transition: color 0.3s ease;
 }
 
 a#email-link:hover {
-    color: #0056b3; /* Darker color on hover */
+    color: #0056b3;
 }
 
-/* Center the content */
-.contact {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+/* Services section */
+.service-section {
+    padding: 40px;
+    background-color: #f9f9f9;
 }
 
-/* Advertisement Images */
-.ads {
-    position: relative; /* Allow absolute positioning within this section */
+.service-item img {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.slider {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    height: 600px;
-    overflow: visible; /* Ensure any positioned elements are not cut off */
-    padding-bottom: 60px;
-}
-
-.slider img {
-    max-width: 100%;
-    max-height: 100%;
-    position: absolute;
-    transition: opacity 0.5s ease; /* Add transition for smooth fading */
-    opacity: 0; /* Start with all images hidden */
-}
-
-.slider img:first-child {
-    opacity: 1; /* Show the first image */
-}
-
-/* Indicator Styles */
-.indicators {
-    position: absolute;
-    top: -60px; /* Move indicators to below the images */
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    z-index: 10; /* Ensure indicators are above images */
-}
-
-.indicator {
-    width: 16px; /* Increased size */
-    height: 16px;
-    background-color: #ccc; /* Lighter grey for better visibility */
-    border-radius: 50%;
-    margin: 0 8px; /* Spacing between indicators */
-    cursor: pointer; /* Show pointer cursor */
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.indicator.active {
-    background-color: #007bff; /* Highlighted color for active indicator */
-    transform: scale(1.2); /* Slightly enlarge active indicator */
+/* Footer Styles */
+footer {
+    font-family: 'Roboto', sans-serif;
+    padding: 30px;
+    background-color: #333;
+    color: white;
 }
