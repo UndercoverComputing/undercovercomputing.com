@@ -66,25 +66,3 @@ window.fbAsyncInit = function() {
     js.src = "https://connect.facebook.net/en_US/sdk.js";
     fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
-
-// Scroll Animation
-document.addEventListener("DOMContentLoaded", () => {
-  const fadeInContainers = document.querySelectorAll("main .fade-in-container");
-
-  const observerOptions = {
-    threshold: 0.1 // Trigger when 10% of the element is visible
-  };
-
-  const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-        observer.unobserve(entry.target); // Stop observing once it's visible
-      }
-    });
-  }, observerOptions);
-
-  fadeInContainers.forEach(container => {
-    Array.from(container.children).forEach(element => observer.observe(element));
-  });
-});
