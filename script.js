@@ -20,23 +20,39 @@ const images = document.querySelectorAll('.slider img');
 const indicators = document.querySelectorAll('.indicator');
 const totalImages = images.length;
 
-function showImage(index) {
-    images[currentIndex].style.opacity = '0'; // Fade out current image
-    indicators[currentIndex].classList.remove('active'); // Remove active class from current indicator
-    currentIndex = index; // Update current index
-    images[currentIndex].style.opacity = '1'; // Fade in new image
-    indicators[currentIndex].classList.add('active'); // Add active class to new indicator
-}
+if (totalImages === 0 || indicators.length === 0 || indicators.length !== totalImages) {
+    console.error("Error: Images or indicators not found or mismatch in count.");
+} else {
+    function showImage(index) {
+        if (index >= 0 && index < totalImages) {
+            if (images[currentIndex]) {
+                images[currentIndex].style.opacity = '0';
+            }
+            if (indicators[currentIndex]) {
+                indicators[currentIndex].classList.remove('active');
+            }
+            currentIndex = index;
+            if (images[currentIndex]) {
+                images[currentIndex].style.opacity = '1';
+            }
+            if (indicators[currentIndex]) {
+                indicators[currentIndex].classList.add('active');
+            }
+        } else {
+            console.error("Index out of bounds:", index);
+        }
+    }
 
-function showNextImage() {
-    const nextIndex = (currentIndex + 1) % totalImages;
-    showImage(nextIndex);
-}
+    function showNextImage() {
+        const nextIndex = (currentIndex + 1) % totalImages;
+        showImage(nextIndex);
+    }
 
-// Initialize the slider by hiding all images except the first one
-images.forEach((img, index) => {
-    img.style.opacity = index === 0 ? '1' : '0'; // Set initial opacity
-});
+    // Initialize the slider
+    if (images.length > 0) {
+        showImage(0); // Show the first image
+    }
+}
 
 // Automatically change the image every 5 seconds
 setInterval(showNextImage, 5000);
