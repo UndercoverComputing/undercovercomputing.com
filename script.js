@@ -3,7 +3,7 @@ function copyEmail(event) {
     event.preventDefault();
 
     // Copy the email to clipboard
-    navigator.clipboard.writeText("undercover.computing@gmail.com").then(function() {
+    navigator.clipboard.writeText("lewis@undercovercomputing.com").then(function() {
         // Display the confirmation message
         document.getElementById("confirmation-message").style.display = "block";
         
