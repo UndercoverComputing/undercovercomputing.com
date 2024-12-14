@@ -5,7 +5,7 @@
 
 /* General Body Styles */
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif; /* Changed font to Roboto */
     margin: 0;
     padding: 0;
     background-color: #f4f4f4; /* Light background for better contrast */
@@ -17,7 +17,6 @@ body {
 a {
     text-decoration: none;
     color: black;
-    font-weight: 400;
 }
 
 a:visited {
