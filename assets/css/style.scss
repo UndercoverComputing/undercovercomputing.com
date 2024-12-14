@@ -1,12 +1,8 @@
+---
+---
+
 @import 'jekyll-theme-cayman';
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap'); /* Added Roboto font import */
 
-/* General Body Styles */
-body {
-    font-family: 'Roboto', sans-serif; /* Changed font to Roboto */
-}
-
-/* Link Styles */
 a {
     text-decoration: none;
     color: black;
@@ -99,6 +95,10 @@ footer ul li a:hover {
 /* ---- index.html ---- */
 
 /* Body */
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
 .welcome-section {
     padding: 50px;
     text-align: center;
@@ -167,9 +167,9 @@ footer ul li a:hover {
         text-align: center; /* Center-align text for mobile */
     }
     img.project-name {
-        max-width: 100%;
-        margin-top: -20px;
-    }
+    max-width: 100%;
+    margin-top: -20px;
+}
 }
 /* ---- contact.html ---- */
 
