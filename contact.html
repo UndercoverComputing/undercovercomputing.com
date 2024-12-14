@@ -39,7 +39,9 @@
         <div class="contact">
             <h2><strong>Contact</strong></h2>
             <h4>Send me an email!</h4>
-                <a href="#" onclick="copyEmail(event)" id="email-link">undercover.computing@gmail.com</a> <h6><span style="position: relative; top: -30px; color: black;">Click to copy</span></h6>
+            <div itemscope itemtype="http://schema.org/Person">
+                <a href="#" onclick="copyEmail(event)" id="email-link" itemprop="email">lewis@undercovercomputing.com</a></div>
+                <h6><span style="position: relative; top: -30px; color: black;">Click to copy</span></h6>
                 <p id="confirmation-message" style="display: none; color: green;">Email copied to clipboard!</p>
                 <h6></h6>
         </div>
@@ -58,11 +60,15 @@
         </div> <!-- Finsh Scroll Animation -->
         
     <footer class="site-footer">
-    <p>Follow us on social media!</p>
-    <ul class="social-links">
-        <li><a href="https://www.facebook.com/UndercoverComputing/" target="_blank">Facebook</a></li>
-        <li><a href="https://www.instagram.com/undercovercomputing/" target="_blank">Instagram</a></li>
-    </ul>
+        <p>Follow us on social media!</p>
+        <ul class="social-links">
+            <li><a href="https://www.facebook.com/UndercoverComputing/" target="_blank">Facebook</a></li>
+            <li><a href="https://www.instagram.com/undercovercomputing/" target="_blank">Instagram</a></li>
+        </ul>
+        <div itemscope itemtype="http://schema.org/Person">
+            <span itemprop="name">Lewis Jones</span>
+            <span itemprop="company">Undercover Computing</span>
+        </div>
     </footer>
     </main>
     <script src="/script.js"></script>
