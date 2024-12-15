@@ -83,13 +83,13 @@ footer ul li {
 }
 
 footer ul li a {
-    display: inline-block;  /* Ensure the images are treated as inline-blocks */
+    display: inline-block;
     transition: color 0.3s;
 }
 
 footer ul li a img {
-    width: 30px;  /* Adjust size of the icons */
-    height: auto;
+    width: 24px;  /* Adjusted size */
+    height: 24px; /* Adjusted size */
     transition: transform 0.3s;
 }
 
