@@ -83,14 +83,18 @@ footer ul li {
 }
 
 footer ul li a {
-    color: #000;
-    text-decoration: none;
+    display: inline-block;  /* Ensure the images are treated as inline-blocks */
     transition: color 0.3s;
 }
 
-footer ul li a:hover {
-    color: #00bbff;
-    text-decoration: underline;
+footer ul li a img {
+    width: 30px;  /* Adjust size of the icons */
+    height: auto;
+    transition: transform 0.3s;
+}
+
+footer ul li a:hover img {
+    transform: scale(1.1);  /* Slightly increase size on hover */
 }
 
 /* ---- index.html ---- */
