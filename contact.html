@@ -5,34 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#157878">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    
+
     <!-- Favicon and Icons -->
-    <link rel="icon" href="/images/Logo_Favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/x-icon" href="/images/Logo_Favicon.ico">
     <link rel="apple-touch-icon" href="/images/Logo_Webclip.png">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-    
+
     <!-- Stylesheet -->
     <link rel="stylesheet" href="/assets/css/style.css">
-    
+
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Undercover Computing" />
     <meta property="og:description" content="Contact Undercover Computing" />
     <meta property="og:image" content="https://undercovercomputing.com/images/Logo.png" />
     <meta property="og:url" content="https://undercovercomputing.com/" />
     <meta property="og:type" content="website" />
-    
+
     <!-- Description and Keywords -->
     <meta name="description" content="14-Year-Old IT Technician: New Plymouth based Tech company for all your computing needs. I offer many services including Tech Support, Networking, PC Builds, and Repairs.">
     <meta name="keywords" content="computer, computing, undercover, help, tech, support, IT, technician, networking, new plymouth, needs" />
-    
-    <title>Contact Undercover Computing</title>
-</head>
-<body>
 
+    <title>Contact Undercover Computing</title>
+</head>    
+
+<body>
     <!-- Site Header -->
     <header class="page-header" role="banner">
         <img class="project-name" src="/images/Logo_Landscape-Transparent.png" alt="Undercover Computing Logo">
@@ -46,17 +46,16 @@
 
     <!-- Main Content -->
     <main id="content" class="main-content" role="main">
-        <section class="contact">
+        <div class="contact">
             <h2><strong>Contact</strong></h2>
             <h4>Send me an email!</h4>
             <div itemscope itemtype="http://schema.org/Person">
                 <a href="#" onclick="copyEmail(event)" id="email-link" itemprop="email">lewis@undercovercomputing.com</a>
             </div>
-            <h6 class="email-instructions">Click to copy</h6>
+            <h6><span style="position: relative; top: -30px; color: black;">Click to copy</span></h6>
             <p id="confirmation-message" style="display: none; color: green;">Email copied to clipboard!</p>
-        </section>
-
-        <!-- Ads Section -->
+        </div>
+        
         <section class="ads">
             <div class="slider">
                 <div class="indicators">
@@ -69,7 +68,7 @@
                 <img src="/images/Ads/WiFi_Services_Facebook_Ad.jpg" alt="WiFi Services Ad">
             </div>
         </section>
-        
+
         <!-- Footer -->
         <footer class="site-footer">
             <a href="https://undercovercomputing.com/credits" class="credits-nav-link">Image Credits</a>
@@ -79,19 +78,16 @@
                 <li><a href="https://www.instagram.com/undercovercomputing/" target="_blank"><img src="images/instagram.png" alt="Instagram"></a></li>
             </ul>
         </footer>
-        
     </main>
 
-    <!-- Scripts -->
     <script src="/script.js"></script>
 
-    <!-- Google Analytics -->
+    <!-- Google tag (gtag.js) -->
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-JW2357S3TQ');
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-JW2357S3TQ');
     </script>
-
 </body>
 </html>
