@@ -232,6 +232,12 @@ a#email-link:hover {
     color: #0056b3; /* Darker color on hover */
 }
 
+#confirmation-message {
+    margin-top: -20px;
+    display: none;
+    color: green;
+}  
+
 /* Center the content */
 .contact {
     display: flex;
