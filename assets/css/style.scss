@@ -4,108 +4,279 @@
 @import 'jekyll-theme-cayman';
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
-/* General Styles */
-body {
-    font-family: 'Rubik', sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f9;
-}
+.rubik-font {
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: auto;
+    font-style: normal;
+  }
 
 a {
-    color: #157878;
     text-decoration: none;
-    transition: color 0.3s;
+    color: black;
 }
 
-a:hover {
-    color: #0b5a5a;
+h2 {
+    font-weight: bold;
+}
+
+/* Fade Animations */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* Header */
-.page-header {
-    text-align: center;
-    padding: 20px 0;
-    background-color: #f4f4f9;
-}
-
-.project-name {
-    max-width: 200px;
-    margin-bottom: 10px;
+img.project-name {
+    max-width: 30%;
+    margin-top: -20px;
 }
 
 .site-nav {
     display: flex;
     justify-content: center;
-    gap: 15px;
-    margin-top: 10px;
+    gap: 2rem;
 }
 
-.nav-link {
-    font-weight: bold;
-    color: #333;
+.nav-link:link,
+.nav-link:visited {
+    color: #000000;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
-.nav-link.active {
-    color: #157878;
-    text-decoration: underline;
-}
-
-/* Main Content */
-.main-content {
-    padding: 20px;
-}
-
-.contact a {
-    display: inline-block;
-    margin: 10px 0;
-    font-size: 1.1em;
-    font-weight: bold;
-    color: #157878;
-}
-
-.hidden-message {
-    display: none;
-    color: green;
-    margin-top: 10px;
-}
-
-/* About Section */
-.about {
-    text-align: center;
-}
-
-.about-image {
-    max-width: 100%;
-    height: auto;
-    margin: 20px auto;
-    display: block;
+.nav-link:hover {
+    color: white;
 }
 
 /* Footer */
-.site-footer {
+footer {
     text-align: center;
-    padding: 20px;
-    background-color: #333;
-    color: #fff;
+    padding: 20px 0;
+    color: #000;
 }
 
-.social-links {
+footer ul {
     list-style: none;
     padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
 }
 
-.social-links img {
-    width: 30px;
+footer ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+/* Footer Styles */
+footer p {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+footer ul li a {
+    display: inline-block;
+    transition: color 0.3s;
+}
+
+footer ul li a img {
+    width: 30px;  /* Slightly larger size */
+    height: 30px; /* Slightly larger size */
     transition: transform 0.3s;
 }
 
-.social-links img:hover {
-    transform: scale(1.1);
+footer ul li a:hover img {
+    transform: scale(1.1);  /* Slightly increase size on hover */
+}
+
+/* ---- index.html ---- */
+
+/* Body */
+body {
+      font-family: "Rubik", sans-serif;
+      font-optical-sizing: auto;
+      font-style: normal;
+}
+
+.welcome-section {
+    padding: 50px;
+    text-align: center;
+    background-color: #fff;
+}
+
+/* Services */
+/* Base layout for larger screens */
+.service-section {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.services {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Add space between service items */
+}
+
+.service-item {
+    display: flex;
+    align-items: center; /* Center text vertically */
+    gap: 20px; /* Add space between image and text */
+}
+
+.service-item img {
+    width: 100%; /* Make images 80% of their container width */
+    max-width: 400px; /* Optional: Limit the max size of the images */
+    border-radius: 20px; /* Optional: Add rounded corners */
+}
+
+.service-content {
+    flex: 1; /* Allow text to take up remaining space */
+    text-align: left; /* Align text to the left by default */
+}
+
+.service-content h3 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.service-content ul {
+    list-style: none; /* Remove default list styling */
+    padding: 0;
+    margin: 0;
+}
+
+.service-content ul li {
+    margin-bottom: 5px;
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 800px) {
+    .service-item {
+        flex-direction: column; /* Stack image and text vertically */
+        align-items: center; /* Center the content */
+    }
+
+    .service-item img {
+        width: 90%; /* Slightly increase image width for small screens */
+        max-width: 100%; /* Remove max-width limitation */
+    }
+
+    .service-content {
+        text-align: center; /* Center-align text for mobile */
+    }
+    img.project-name {
+    max-width: 100%;
+    margin-top: -20px;
+}
+}
+/* ---- contact.html ---- */
+
+/* General Link Styles */
+a:link,
+a:visited {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a#email-button {
+    background-color: #007bff;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+a#email-button:hover,
+a#email-button:active {
+    background-color: #0056b3;
+}
+
+a#email-link {
+    color: #007bff; /* Link color */
+    text-decoration: underline; /* Underline the link */
+    display: inline; /* Display inline */
+    transition: color 0.3s ease; /* Transition for hover effect */
+}
+
+a#email-link:hover {
+    color: #0056b3; /* Darker color on hover */
+}
+
+/* Center the content */
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Advertisement Images */
+.ads {
+    position: relative; /* Allow absolute positioning within this section */
+}
+
+.slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 600px;
+    overflow: visible; /* Ensure any positioned elements are not cut off */
+    padding-bottom: 60px;
+}
+
+.slider img {
+    max-width: 100%;
+    max-height: 100%;
+    position: absolute;
+    transition: opacity 0.5s ease; /* Add transition for smooth fading */
+    opacity: 0; /* Start with all images hidden */
+}
+
+.slider img:first-child {
+    opacity: 1; /* Show the first image */
+}
+
+/* Indicator Styles */
+.indicators {
+    position: absolute;
+    top: -60px; /* Move indicators to below the images */
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    z-index: 10; /* Ensure indicators are above images */
+}
+
+.indicator {
+    width: 16px; /* Increased size */
+    height: 16px;
+    background-color: #ccc; /* Lighter grey for better visibility */
+    border-radius: 50%;
+    margin: 0 8px; /* Spacing between indicators */
+    cursor: pointer; /* Show pointer cursor */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.indicator.active {
+    background-color: #007bff; /* Highlighted color for active indicator */
+    transform: scale(1.2); /* Slightly enlarge active indicator */
 }
