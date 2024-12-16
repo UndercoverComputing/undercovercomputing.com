@@ -20,11 +20,6 @@ h2 {
     font-weight: bold;
 }
 
-h6 {
-    margin-top: -25px;
-    margin-bottom: -25px;
-}
-
 /* Fade Animations */
 .fade-in {
     opacity: 0;
@@ -58,6 +53,18 @@ img.project-name {
 
 .nav-link:hover {
     color: white;
+}
+
+.credits-nav-link:link,
+.credits-nav-link:visited {
+    margin-top: -15px;
+    margin-bottom: -15px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.credits-nav-link:hover {
+    color: #0056b3;
 }
 
 /* Footer */
