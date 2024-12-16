@@ -2,80 +2,106 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#157878">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="description" content="14-Year-Old IT Technician offering Tech Support, Networking, PC Builds, and Repairs in New Plymouth.">
-    <meta property="og:title" content="Undercover Computing">
-    <meta property="og:description" content="Undercover Computing Website">
-    <meta property="og:image" content="https://undercovercomputing.com/images/Logo.png">
-    <meta property="og:url" content="https://undercovercomputing.com/">
-    <meta property="og:type" content="website">
-    <link rel="icon" href="/images/Logo_Favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/images/Logo_Favicon.ico">
     <link rel="apple-touch-icon" href="/images/Logo_Webclip.png">
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/style.css">
+    <meta property="fb:app_id" content="1719717172121565" />
+    <meta property="og:title" content="Undercover Computing" />
+    <meta property="og:description" content="Undercover Computing Website" />
+    <meta property="og:image" content="https://undercovercomputing.com/images/Logo.png" />
+    <meta property="og:url" content="https://undercovercomputing.com/" />
+    <meta property="og:type" content="website"/>
+    <meta name="description" content="14-Year-Old IT Technician: New Plymouth based Tech company for all your computing needs. I offer many services including Tech Support, Networking, PC Builds, and Repairs.">
+    <meta name=”keywords” content=”computer, computing, undercover, help, tech, support, IT, technician, networking, new plymouth, needs” />
     <title>Undercover Computing</title>
 </head>
+
 <body>
-<header class="page-header">
-    <img src="/images/Logo_Landscape-Transparent.png" alt="Undercover Computing Logo">
-    <h2>New Plymouth-based Tech company for all your computing needs.</h2>
-    <nav class="site-nav">
-        <a href="#" class="nav-link"><u>Home</u></a>
-        <a href="/contact" class="nav-link"><u>Contact</u></a>
-        <a href="/about" class="nav-link"><u>About</u></a>
-    </nav>
-</header>
-<main id="content">
-    <section>
-        <h2>Welcome to Undercover Computing</h2>
-        <p>I am <span itemprop="name">Lewis Jones</span>, a 14-Year-Old IT Technician offering many services tailored to your needs.</p>
-    </section>
+    <!-- Site Header -->
+    <header class="page-header" role="banner">
+        <img class="project-name" src="/images/Logo_Landscape-Transparent.png" alt="Undercover Computing Logo">
+        <h2 class="project-tagline">New Plymouth-based Tech company for all your computing needs.</h2>
+        <nav class="site-nav">
+            <a href="#" class="nav-link"><strong><u>Home</u></strong></a>
+            <a href="https://undercovercomputing.com/contact" class="nav-link"><strong><u>Contact</u></strong></a>
+            <a href="https://undercovercomputing.com/about" class="nav-link"><strong><u>About</u></strong></a>
+        </nav>
+    </header>
+    <!-- Main Content -->
+    <main id="content" class="main-content" role="main">
+    <div itemscope itemtype="http://schema.org/Person">
+        <section class="welcome-section">
+            <h2><strong>Welcome to Undercover Computing</strong></h2>
+            <p>I am <span itemprop="name">Lewis Jones</span>, a 14-Year-Old IT Technician. I run a small New Plymouth based Tech company that offers many services..</p>
+        </section>
+    </div>
+
     <section class="service-section">
-        <h2>Services We Offer</h2>
-        <article class="service-item">
+        <h2><strong>We offer a wide range of services tailored to meet your needs.</strong></h2>
+        
+        <section class="service-item">
             <img src="/images/networking_landscape.jpg" alt="Networking">
-            <h3>Networking</h3>
-            <ul>
-                <li>Building and configuring networks</li>
-                <li>Setting up internet and WiFi</li>
-                <li>Firewall and security management</li>
-            </ul>
-        </article>
-        <article class="service-item">
+            <div class="service-content">
+                <h3><strong>Networking</strong></h3>
+                <ul>
+                    <li>- Building and configuring a network</li>
+                    <li>- Setting up internet</li>
+                    <li>- Installing WiFi</li>
+                    <li>- Firewall and Security management</li>
+                </ul>
+            </div>
+        </section>
+        <br>
+        <br>
+        <section class="service-item">
             <img src="/images/repairs_landscape.jpg" alt="Computer Repairs">
-            <h3>Computer Repairs</h3>
-            <ul>
-                <li>Storage upgrades</li>
-                <li>PC building</li>
-                <li>Troubleshooting</li>
-            </ul>
-        </article>
-        <article class="service-item">
+            <div class="service-content">
+                <h3><strong>Computer Repairs</strong></h3>
+                <ul>
+                    <li>- Storage upgrades</li>
+                    <li>- PC building / help</li>
+                    <li>- Troubleshooting</li>
+                </ul>
+            </div>
+        </section>
+        <br>
+        <br>
+        <section class="service-item">
             <img src="/images/support_landscape.jpg" alt="Tech Support">
-            <h3>Tech Support</h3>
-            <ul>
-                <li>Remote troubleshooting</li>
-                <li>Software management</li>
-                <li>Windows OS assistance</li>
-            </ul>
-        </article>
+            <div class="service-content">
+                <h3><strong>Tech Support</strong></h3>
+                <ul>
+                    <li>- Remote Help / Troubleshooting</li>
+                    <li>- Software management</li>
+                    <li>- Windows Operating System Help</li>
+                </ul>
+            </div>
+        </section>
     </section>
-</main>
-<footer>
-    <p>Follow me on social media!</p>
-    <ul>
-        <li><a href="https://www.facebook.com/UndercoverComputing/" target="_blank"><img src="images/facebook.png" alt="Facebook"></a></li>
-        <li><a href="https://www.instagram.com/undercovercomputing/" target="_blank"><img src="images/instagram.png" alt="Instagram"></a></li>
-    </ul>
-</footer>
-<script src="/script.js"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-JW2357S3TQ');
-</script>
+        
+        <footer class="site-footer">
+            <p>Follow me on social media!</p>
+            <ul class="social-links">
+                <li><a href="https://www.facebook.com/UndercoverComputing/" target="_blank"><img src="images/facebook.png" alt="Facebook"></a></li>
+                <li><a href="https://www.instagram.com/undercovercomputing/" target="_blank"><img src="images/instagram.png" alt="Instagram"></a></li>
+            </ul>
+        </footer>
+    
+    </main>
+    <script src="/script.js"></script>
+    <!-- Google tag (gtag.js) -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-JW2357S3TQ');
+    </script>
 </body>
 </html>
