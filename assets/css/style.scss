@@ -71,16 +71,17 @@ a:hover {
     box-shadow: none;  /* No shadow */
 }
 
+/* Restoring the original nav link colors */
 .nav-link:link,
 .nav-link:visited {
-    color: #007bff;  /* Default color for navigation */
+    color: #000000;  /* Default black color for nav links */
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
 }
 
 .nav-link:hover {
-    color: #0056b3;  /* Darker color on hover */
+    color: white;  /* White color on hover */
 }
 
 img.project-name {
