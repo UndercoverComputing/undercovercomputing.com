@@ -37,13 +37,13 @@ p {
 /* Links */
 a {
     text-decoration: none;
-    color: black;
+    color: #007bff;  /* Default color (e.g., blue) */
     transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
 a:hover {
     text-decoration: underline;
-    color: #0056b3;
+    color: #0056b3;  /* Color when hovered (e.g., darker blue) */
 }
 
 /* Fade Animations */
@@ -63,12 +63,12 @@ a:hover {
     display: flex;
     justify-content: center;
     gap: 2rem;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: transparent;  /* Remove background */
     position: sticky;
     top: 0;
     z-index: 1000;
     padding: 10px 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: none;  /* Remove any shadow if added */
 }
 
 .nav-link:link,
@@ -97,11 +97,14 @@ img.project-name {
 
 /* Footer */
 footer {
+    width: 100%;  /* Ensure full width */
     background-color: #f8f9fa;
     text-align: center;
     padding: 40px 20px;
     border-top: 1px solid #eaeaea;
     color: #000;
+    position: relative;  /* Ensure it respects the layout */
+    left: 0;  /* Make sure it's aligned to the left */
 }
 
 footer ul {
