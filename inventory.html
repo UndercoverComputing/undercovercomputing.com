@@ -22,70 +22,103 @@
     <meta name="robots" content="noindex, nofollow">
 
     <title>Undercover Computing</title>
-    
+
     <style>
-      /* Animations and Styles */
+      /* General Animation Styles */
       ul {
           list-style: none;
           padding: 0;
           margin: 20px 0;
       }
-
+  
       ul li {
           margin-bottom: 15px;
-          font-size: 1.2rem;
+          font-size: 1rem;
           display: flex;
           align-items: center;
           gap: 10px;
           opacity: 0;
-          transform: translateX(-50px);
-          animation: fadeIn 0.8s ease-out forwards;
+          transform: translateY(20px);
+          animation: slideUp 0.6s ease-out forwards;
       }
-
-      ul li:nth-child(1) { animation-delay: 0.2s; }
-      ul li:nth-child(2) { animation-delay: 0.4s; }
-      ul li:nth-child(3) { animation-delay: 0.6s; }
-      ul li:nth-child(4) { animation-delay: 0.8s; }
-      ul li:nth-child(5) { animation-delay: 1s; }
-      ul li:nth-child(6) { animation-delay: 1.2s; }
-      ul li:nth-child(7) { animation-delay: 1.4s; }
-      ul li:nth-child(8) { animation-delay: 1.6s; }
-
-      @keyframes fadeIn {
+  
+      ul li:nth-child(1) { animation-delay: 0.1s; }
+      ul li:nth-child(2) { animation-delay: 0.2s; }
+      ul li:nth-child(3) { animation-delay: 0.3s; }
+      ul li:nth-child(4) { animation-delay: 0.4s; }
+      ul li:nth-child(5) { animation-delay: 0.5s; }
+  
+      @keyframes slideUp {
           from {
               opacity: 0;
-              transform: translateX(-50px);
+              transform: translateY(20px);
+          }
+          to {
+              opacity: 1;
+              transform: translateY(0);
+          }
+      }
+  
+      ul li strong {
+          font-weight: bold;
+          color: #007bff;
+          transition: color 0.3s ease, transform 0.3s ease;
+      }
+  
+      ul li:hover strong {
+          color: #0056b3;
+          transform: scale(1.1);
+      }
+  
+      /* Animation for Nested Lists */
+      ul ul li {
+          animation: fadeInNested 0.5s ease-out forwards;
+      }
+  
+      ul ul li:nth-child(1) { animation-delay: 0.1s; }
+      ul ul li:nth-child(2) { animation-delay: 0.2s; }
+      ul ul li:nth-child(3) { animation-delay: 0.3s; }
+  
+      @keyframes fadeInNested {
+          from {
+              opacity: 0;
+              transform: translateX(-20px);
           }
           to {
               opacity: 1;
               transform: translateX(0);
           }
       }
-
-      ul li strong {
-          font-weight: bold;
-          color: #007bff;
-          transition: color 0.3s ease;
-      }
-
-      ul li:hover strong {
-          color: #0056b3;
-      }
-
-      /* Apply animations to images only inside the <main> element */
+  
+      /* Image Animations */
       main img {
           max-width: 100%;
           margin-top: 20px;
           border-radius: 10px;
           box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
           transform: scale(0.9);
-          transition: transform 0.3s ease;
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+          opacity: 0;
+          animation: fadeInImage 0.8s ease-out forwards;
+          animation-delay: 0.5s;
       }
-
+  
       main img:hover {
           transform: scale(1);
+          box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
       }
-  </style>
+  
+      @keyframes fadeInImage {
+          from {
+              opacity: 0;
+              transform: scale(0.8);
+          }
+          to {
+              opacity: 1;
+              transform: scale(0.9);
+          }
+      }
+  </style>  
 </head>
 <body>
     <!-- Site Header -->
