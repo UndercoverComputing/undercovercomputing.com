@@ -23,100 +23,103 @@
 
     <title>Undercover Computing</title>
 
-    <style>
-      /* General Animation Styles */
-      ul {
-          list-style: none;
+    <!-- ANIMATIONS GO HERE -->
+    <style> 
+      @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+  
+      /* Global Styles */
+      body, ul, p {
+          font-family: 'Rubik', sans-serif;
+          margin: 0;
           padding: 0;
-          margin: 20px 0;
+          box-sizing: border-box;
+          background-color: #f4f4f9;
       }
   
-      ul li {
-          margin-bottom: 15px;
-          font-size: 1rem;
-          display: flex;
-          align-items: center;
-          gap: 10px;
+      h1, h3 {
+          color: #2c3e50;
+          text-align: center;
+          margin-top: 1rem;
+      }
+  
+      ul {
+          list-style-type: none;
+          padding: 0;
+      }
+  
+      li {
+          padding: 10px;
+          background-color: white;
+          border-radius: 8px;
+          margin: 10px 0;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+          transition: transform 0.3s, box-shadow 0.3s;
+      }
+  
+      li:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      }
+  
+      /* Fade-in Animation */
+      .fade-in {
           opacity: 0;
           transform: translateY(20px);
-          animation: slideUp 0.6s ease-out forwards;
+          animation: fadeInUp 0.8s ease forwards;
+          animation-delay: var(--delay, 0s);
       }
   
-      ul li:nth-child(1) { animation-delay: 0.1s; }
-      ul li:nth-child(2) { animation-delay: 0.2s; }
-      ul li:nth-child(3) { animation-delay: 0.3s; }
-      ul li:nth-child(4) { animation-delay: 0.4s; }
-      ul li:nth-child(5) { animation-delay: 0.5s; }
-  
-      @keyframes slideUp {
-          from {
-              opacity: 0;
-              transform: translateY(20px);
-          }
+      @keyframes fadeInUp {
           to {
               opacity: 1;
               transform: translateY(0);
           }
       }
   
-      ul li strong {
+      /* Links */
+      a {
+          text-decoration: none;
+          color: #3498db;
           font-weight: bold;
-          color: #007bff;
-          transition: color 0.3s ease, transform 0.3s ease;
+          transition: color 0.3s ease;
       }
   
-      ul li:hover strong {
-          color: #0056b3;
-          transform: scale(1.1);
+      a:hover {
+          color: #2c3e50;
       }
   
-      /* Animation for Nested Lists */
-      ul ul li {
-          animation: fadeInNested 0.5s ease-out forwards;
+      /* Main PC Section */
+      main ul {
+          max-width: 800px;
+          margin: 0 auto;
       }
   
-      ul ul li:nth-child(1) { animation-delay: 0.1s; }
-      ul ul li:nth-child(2) { animation-delay: 0.2s; }
-      ul ul li:nth-child(3) { animation-delay: 0.3s; }
-  
-      @keyframes fadeInNested {
-          from {
-              opacity: 0;
-              transform: translateX(-20px);
-          }
-          to {
-              opacity: 1;
-              transform: translateX(0);
-          }
+      /* Style for Equipment Info */
+      p, ul ul {
+          padding-left: 20px;
       }
   
-      /* Image Animations */
-      main img {
+      /* Service Item Hover Effects */
+      .service-item img {
           max-width: 100%;
-          margin-top: 20px;
           border-radius: 10px;
-          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-          transform: scale(0.9);
           transition: transform 0.3s ease, box-shadow 0.3s ease;
-          opacity: 0;
-          animation: fadeInImage 0.8s ease-out forwards;
-          animation-delay: 0.5s;
       }
   
-      main img:hover {
-          transform: scale(1);
-          box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+      .service-item:hover img {
+          transform: scale(1.05);
+          box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+      }
+      
+      /* Miscellaneous and Random Computers Sections */
+      h3 {
+          font-size: 1.75rem;
+          margin-bottom: 20px;
       }
   
-      @keyframes fadeInImage {
-          from {
-              opacity: 0;
-              transform: scale(0.8);
-          }
-          to {
-              opacity: 1;
-              transform: scale(0.9);
-          }
+      /* Smooth Scroll */
+      html {
+          scroll-behavior: smooth;
       }
   </style>  
 </head>
