@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <!-- Favicon and Icons -->
+    <link rel="icon" type="image/x-icon" href="/images/Logo_Favicon.ico">
+    <link rel="apple-touch-icon" href="/images/Logo_Webclip.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+    <!-- Noindex meta tag -->
+    <meta name="robots" content="noindex, nofollow">
+
+    <title>Undercover Computing</title>
+</head>
+<body>
+    <!-- Site Header -->
+    <header class="page-header" role="banner">
+        <img class="project-name" src="/images/Logo_Landscape-Transparent.png" alt="Undercover Computing Logo">
+        <h2 class="project-tagline">New Plymouth-based Tech company for all your computing needs.</h2>
+        <nav class="site-nav">
+            <a href="https://undercovercomputing.com/" class="nav-link"><strong><u>Home</u></strong></a>
+            <a href="https://undercovercomputing.com/contact" class="nav-link"><strong><u>Contact</u></strong></a>
+            <a href="https://undercovercomputing.com/about" class="nav-link"><strong><u>About</u></strong></a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+      <main id="content" class="main-content" role="main">
+        <h1><strong>Main Devices:</strong></h1>
+        <ul>
+          <li>Main PC - <a href="https://undercovercomputing.com/current-setup">custom built</a>.</li>
+          <li>Main Laptop - Lenovo Thinkpad T495s (Ryzen 7 Pro).</li>
+        </ul>
+        
+        <h1><strong>Server Equipment:</strong></h1>
+        
+        <h3><strong>Server 1 - theserver1</strong></h3>
+        <p><strong>Model:</strong> Citrix Netscaler NSSDX-11500</p>
+        <p><strong>Role:</strong> Main VM/Container host</p>
+        <ul>
+          <li><strong>CPU:</strong> 2x Intel Xeon E5645 (6 cores, 12 threads per CPU)</li>
+          <li><strong>Memory:</strong> 192GB DDR3 ECC</li>
+          <li><strong>Networking:</strong>
+            <ul>
+              <li>2x 1GbE RJ45</li>
+              <li>2x 10GbE SFP+ (direct link to backup server)</li>
+            </ul>
+          </li>
+          <li><strong>Storage:</strong>
+            <ul>
+              <li>240GB 2.5” SATA SSD (boot)</li>
+              <li>500GB 2.5” SATA SSD (VM storage, ZFS)</li>
+              <li>2x 120GB 2.5” SATA SSD (redundant VM storage, ZFS mirror)</li>
+              <li>2x 1TB 3.5” SATA HDD (SMB share, ZFS mirror)</li>
+            </ul>
+          </li>
+          <li><strong>OS:</strong> Proxmox VE 8.2.7 (VM and container management)</li>
+        </ul>
+        
+        <h3><strong>Server 2 - theserver2</strong></h3>
+        <p><strong>Model:</strong> Citrix Netscaler NSSDX-11500</p>
+        <p><strong>Role:</strong> Backup server</p>
+        <ul>
+          <li><strong>CPU:</strong> 2x Intel Xeon E5645 (6 cores, 12 threads per CPU)</li>
+          <li><strong>Memory:</strong> 192GB DDR3 ECC</li>
+          <li><strong>Networking:</strong>
+            <ul>
+              <li>2x 1GbE RJ45</li>
+              <li>2x 10GbE SFP+ (direct link to backup server)</li>
+            </ul>
+          </li>
+          <li><strong>Storage:</strong>
+            <ul>
+              <li>2x 120GB 2.5” SATA SSD (boot, ZFS mirror)</li>
+              <li>2x 1TB 3.5” SATA HDD (backup storage, ZFS mirror)</li>
+            </ul>
+          </li>
+          <li><strong>OS:</strong> Proxmox Backup Server 3.2-7</li>
+        </ul>
+        
+        <h3><strong>Server 3 - dell-laptop</strong></h3>
+        <p><strong>Model:</strong> Dell Inspiron 5593</p>
+        <p><strong>Role:</strong> Home Assistant and Frigate container host</p>
+        <ul>
+          <li><strong>CPU:</strong> Intel i7-1065G7 (4 cores, 8 threads)</li>
+          <li><strong>Memory:</strong> 16GB DDR4</li>
+          <li><strong>Accelerator:</strong> Google Coral A+E TPU (for AI object detection)</li>
+          <li><strong>Storage:</strong>
+            <ul>
+              <li>120GB SATA M.2 SSD (boot)</li>
+              <li>500GB 2.5” HDD (Frigate recordings)</li>
+            </ul>
+          </li>
+          <li><strong>OS:</strong> Proxmox VE 8.2.7</li>
+        </ul>
+        
+        <h3>Miscellaneous</h3>
+        <ul>
+          <li>UPS - APC Smart UPS X 3000</li>
+          <li>Switch - 3com Baseline Switch 2928-SFP Plus</li>
+        </ul>
+        
+        <h1><strong>Work Devices</strong></h1>
+        <ul>
+          <li>HP Z800 Workstation with Quadro 6000.</li>
+          <li>Acer Veriton S6610G with Quadro FX 1800.</li>
+        </ul>
+        
+        <h1><strong>Laptops</strong></h1>
+        <ul>
+          <li>2x Broken Thinkpad T495s - for parts.</li>
+          <li>Chromebook 100e Gen3 (laptop before I got the T495s).</li>
+          <li>HP Chromebook 11 G7 EE (for sale, charger available for $50).</li>
+          <li>Lenovo Thinkpad x240 (i5).</li>
+          <li>2x Lenovo Thinkpad T420.</li>
+          <li>Acer Chromebook C732 that I jailbroke and installed Windows on.</li>
+          <li>12 random Chromebooks - for parts</li>
+        </ul>
+        
+        <h1><strong>Tools</strong></h1>
+        <p>I use a variety of tools.</p>
+        <ul>
+          <li>iFixit Pro Tech Toolkit</li>
+          <li>iFixit Magnetic Project Mat</li>
+          <li>iFixit Anti-Static Project Tray</li>
+          <li>Generic soldering iron</li>
+          <li>Generic Screwdriver set</li>
+          <li>Generic multimeter</li>
+          <li>Wire strippers, pliers, etc.</li>
+        </ul>
+        
+        <p>I also use adapters for many tasks.</p>
+        <ul>
+          <li>USB A <strong>male</strong> to RJ45 <strong>female</strong></li>
+          <li>USB A <strong>female</strong> to USB C <strong>male</strong> (USB 3.0)</li>
+          <li>USB C <strong>female</strong> to USB A <strong>male</strong> (USB 3.0)</li>
+          <li>RJ45 console cable to serial</li>
+          <li>Serial to USB A</li>
+          <li>USB A to USB C</li>
+          <li>Many USB C cables</li>
+          <li>A lot of HDMI, DP, DVI, VGA etc</li>
+        </ul>
+        
+        <p>My network is on a UPS and I have about 2 1/2 hours of internet during a power outage, and my computer is also on a UPS so I can continue working when there is a power outage (it doesn’t happen very often, but it does happen).</p>
+      </main>
+  
+    <!-- Footer -->
+    <footer class="site-footer">
+        <a href="https://undercovercomputing.com/credits" class="credits-nav-link">Image Credits</a>
+        <p>Follow me on social media!</p>
+        <ul class="social-links">
+            <li><a href="https://www.facebook.com/UndercoverComputing/" target="_blank" aria-label="Facebook"><img src="images/facebook.png" alt="Facebook"></a></li>
+            <li><a href="https://www.instagram.com/undercovercomputing/" target="_blank" aria-label="Instagram"><img src="images/instagram.png" alt="Instagram"></a></li>
+        </ul>
+    </footer>
+
+</body>
+</html>
