@@ -324,10 +324,8 @@ a#email-link:hover {
 }
 
 /* Additional styling for list items */
-ul li {
-    margin-bottom: 15px;
+.fade-in ul li {
     font-size: 1.2rem;
     display: flex;
     align-items: center;
-    gap: 10px;
 }
