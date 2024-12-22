@@ -37,6 +37,18 @@
             }
         }
 
+        /* Slide-in Animation for List Items */
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
         .fade-in {
             opacity: 0;
             transform: translateY(20px);
@@ -47,12 +59,29 @@
             opacity: 1;
             transform: translateY(0);
         }
+
+        ul li {
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            opacity: 0;
+            transform: translateX(-50px);
+            animation: slideInLeft 0.8s ease-out forwards;
+        }
+
+        /* Ensures that list items animate only when they enter the viewport */
+        ul li.visible {
+            animation-play-state: running;
+        }
     </style>
 
     <script>
-        // Intersection Observer for scrolling fade-in
+        // Intersection Observer for scrolling fade-in and list item slide-in
         document.addEventListener('DOMContentLoaded', function() {
             const fadeInElements = document.querySelectorAll('.fade-in');
+            const listItems = document.querySelectorAll('ul li');
 
             const observerOptions = {
                 root: null,
@@ -72,6 +101,10 @@
             fadeInElements.forEach(element => {
                 observer.observe(element);
             });
+
+            listItems.forEach(item => {
+                observer.observe(item);
+            });
         });
     </script>
 </head>
@@ -90,7 +123,7 @@
     <!-- Main Content -->
     <main id="content" class="main-content" role="main">
         <h1 class="fade-in"><strong>Main Devices:</strong></h1>
-        <ul class="fade-in">
+        <ul>
             <li>Main PC - <a href="https://undercovercomputing.com/current-setup">custom built</a>.</li>
             <li>Main Laptop - Lenovo Thinkpad T495s (Ryzen 7 Pro).</li>
         </ul>
@@ -101,7 +134,7 @@
         <h3 class="fade-in"><strong>Server 1 - theserver1</strong></h3>
         <p class="fade-in"><strong>Model:</strong> Citrix Netscaler NSSDX-11500</p>
         <p class="fade-in"><strong>Role:</strong> Main VM/Container host</p>
-        <ul class="fade-in">
+        <ul>
             <li><strong>CPU:</strong> 2x Intel Xeon E5645 (6 cores, 12 threads per CPU)</li>
             <li><strong>Memory:</strong> 192GB DDR3 ECC</li>
             <li><strong>Networking:</strong>
@@ -124,7 +157,7 @@
         <h3 class="fade-in"><strong>Server 2 - theserver2</strong></h3>
         <p class="fade-in"><strong>Model:</strong> Citrix Netscaler NSSDX-11500</p>
         <p class="fade-in"><strong>Role:</strong> Backup server</p>
-        <ul class="fade-in">
+        <ul>
             <li><strong>CPU:</strong> 2x Intel Xeon E5645 (6 cores, 12 threads per CPU)</li>
             <li><strong>Memory:</strong> 192GB DDR3 ECC</li>
             <li><strong>Networking:</strong>
@@ -145,7 +178,7 @@
         <h3 class="fade-in"><strong>Server 3 - dell-laptop</strong></h3>
         <p class="fade-in"><strong>Model:</strong> Dell Inspiron 5593</p>
         <p class="fade-in"><strong>Role:</strong> Home Assistant and Frigate container host</p>
-        <ul class="fade-in">
+        <ul>
             <li><strong>CPU:</strong> Intel i7-1065G7 (4 cores, 8 threads)</li>
             <li><strong>Memory:</strong> 16GB DDR4</li>
             <li><strong>Accelerator:</strong> Google Coral A+E TPU (for AI object detection)</li>
@@ -159,28 +192,14 @@
         </ul>
         
         <h3 class="fade-in">Miscellaneous</h3>
-        <ul class="fade-in">
+        <ul>
             <li>UPS - APC Smart UPS X 3000</li>
             <li>Switch - 3com Baseline Switch 2928-SFP Plus</li>
         </ul>
         
-        <h1 class="fade-in"><strong>Work Devices</strong></h1>
-        <ul class="fade-in">
-            <li>HP Z800 Workstation with Quadro 6000.</li>
-            <li>Acer Veriton S6610G with Quadro FX 1800.</li>
-        </ul>
-        
-        <h1 class="fade-in"><strong>Laptops</strong></h1>
-        <ul class="fade-in">
-            <li>2x Broken Thinkpad X230s</li>
-            <li>HP ProBook 450 G1 with NVIDIA GeForce 820M.</li>
-        </ul>
-
         <h1 class="fade-in"><strong>Miscellaneous Electronics</strong></h1>
-        <ul class="fade-in">
+        <ul>
             <li>Symbol Tech Inc DS6-707 Barcode Scanner</li>
-            <li>APC Smart UPS X 3000</li>
-            <li>3com Baseline Switch 2928-SFP Plus</li>
             <li>Stanley Junior Hacksaw</li>
         </ul>
     </main>
