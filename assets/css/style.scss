@@ -297,3 +297,37 @@ a#email-link:hover {
     background-color: #007bff;
     transform: scale(1.2);
 }
+
+/* Fade and slide from left animation */
+@keyframes fadeInSlide {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Default state for all fade-in elements */
+.fade-in {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* When element is visible, trigger fade and slide in */
+.fade-in.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Additional styling for list items */
+ul li {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}

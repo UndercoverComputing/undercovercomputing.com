@@ -82,3 +82,27 @@ indicators.forEach((indicator, index) => {
 //    js.src = "https://connect.facebook.net/en_US/sdk.js";
 //    fjs.parentNode.insertBefore(js, fjs);
 //}(document, 'script', 'facebook-jssdk'));
+
+// Intersection Observer for scrolling fade-in and list item slide-in
+document.addEventListener('DOMContentLoaded', function() {
+    const fadeInElements = document.querySelectorAll('.fade-in');
+
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1 // Trigger when 10% of the element is in view
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target); // Unobserve after the animation triggers
+            }
+        });
+    }, observerOptions);
+
+    fadeInElements.forEach(element => {
+        observer.observe(element);
+    });
+});
