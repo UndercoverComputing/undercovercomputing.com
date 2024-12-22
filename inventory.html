@@ -25,6 +25,7 @@
 
     <!-- ANIMATIONS GO HERE -->
     <style>
+        /* Fade Animation */
         @keyframes fadeIn {
             from {
                 opacity: 0;
@@ -38,15 +39,23 @@
 
         .fade-in {
             opacity: 0;
-            transform: translateY(20px);
             animation: fadeIn 0.8s ease-out forwards;
         }
-
-        .visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
     </style>
+
+    <script>
+        // Script to add the 'fade-in' class once the page has loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            const mainContent = document.querySelector('main');
+            const elements = mainContent.querySelectorAll('h1, h2, h3, p, ul, li, a'); // Add fade to text elements
+
+            elements.forEach((el, index) => {
+                setTimeout(() => {
+                    el.classList.add('fade-in');
+                }, index * 100); // Stagger animation for a smoother effect
+            });
+        });
+    </script>
 </head>
 <body>
     <!-- Site Header -->
@@ -62,15 +71,109 @@
 
     <!-- Main Content -->
     <main id="content" class="main-content" role="main">
-        <h1 class="fade-in"><strong>Main Devices:</strong></h1>
-        <ul class="fade-in">
+        <h1><strong>Main Devices:</strong></h1>
+        <ul>
             <li>Main PC - <a href="https://undercovercomputing.com/current-setup">custom built</a>.</li>
             <li>Main Laptop - Lenovo Thinkpad T495s (Ryzen 7 Pro).</li>
         </ul>
-        <!-- Continue adding fade-in classes to other sections of the main content -->
-        <h1 class="fade-in"><strong>Server Equipment:</strong></h1>
-        <p class="fade-in">Check out the <a href="https://imgur.com/gallery/servers-networking-equipment-5UBlhes#DSXvPH2">server and networking equipment here</a>.</p>
-        <!-- Other content -->
+        
+        <h1><strong>Server Equipment:</strong></h1>
+        <p>Check out the <a href="https://imgur.com/gallery/servers-networking-equipment-5UBlhes#DSXvPH2">server and networking equipment here</a>.</p>
+        
+        <h3><strong>Server 1 - theserver1</strong></h3>
+        <p><strong>Model:</strong> Citrix Netscaler NSSDX-11500</p>
+        <p><strong>Role:</strong> Main VM/Container host</p>
+        <ul>
+            <li><strong>CPU:</strong> 2x Intel Xeon E5645 (6 cores, 12 threads per CPU)</li>
+            <li><strong>Memory:</strong> 192GB DDR3 ECC</li>
+            <li><strong>Networking:</strong>
+                <ul>
+                    <li>2x 1GbE RJ45</li>
+                    <li>2x 10GbE SFP+ (direct link to backup server)</li>
+                </ul>
+            </li>
+            <li><strong>Storage:</strong>
+                <ul>
+                    <li>240GB 2.5” SATA SSD (boot)</li>
+                    <li>500GB 2.5” SATA SSD (VM storage, ZFS)</li>
+                    <li>2x 120GB 2.5” SATA SSD (redundant VM storage, ZFS mirror)</li>
+                    <li>2x 1TB 3.5” SATA HDD (SMB share, ZFS mirror)</li>
+                </ul>
+            </li>
+            <li><strong>OS:</strong> Proxmox VE 8.2.7 (VM and container management)</li>
+        </ul>
+        
+        <h3><strong>Server 2 - theserver2</strong></h3>
+        <p><strong>Model:</strong> Citrix Netscaler NSSDX-11500</p>
+        <p><strong>Role:</strong> Backup server</p>
+        <ul>
+            <li><strong>CPU:</strong> 2x Intel Xeon E5645 (6 cores, 12 threads per CPU)</li>
+            <li><strong>Memory:</strong> 192GB DDR3 ECC</li>
+            <li><strong>Networking:</strong>
+                <ul>
+                    <li>2x 1GbE RJ45</li>
+                    <li>2x 10GbE SFP+ (direct link to backup server)</li>
+                </ul>
+            </li>
+            <li><strong>Storage:</strong>
+                <ul>
+                    <li>2x 120GB 2.5” SATA SSD (boot, ZFS mirror)</li>
+                    <li>2x 1TB 3.5” SATA HDD (backup storage, ZFS mirror)</li>
+                </ul>
+            </li>
+            <li><strong>OS:</strong> Proxmox Backup Server 3.2-7</li>
+        </ul>
+        
+        <h3><strong>Server 3 - dell-laptop</strong></h3>
+        <p><strong>Model:</strong> Dell Inspiron 5593</p>
+        <p><strong>Role:</strong> Home Assistant and Frigate container host</p>
+        <ul>
+            <li><strong>CPU:</strong> Intel i7-1065G7 (4 cores, 8 threads)</li>
+            <li><strong>Memory:</strong> 16GB DDR4</li>
+            <li><strong>Accelerator:</strong> Google Coral A+E TPU (for AI object detection)</li>
+            <li><strong>Storage:</strong>
+                <ul>
+                    <li>120GB SATA M.2 SSD (boot)</li>
+                    <li>500GB 2.5” HDD (Frigate recordings)</li>
+                </ul>
+            </li>
+            <li><strong>OS:</strong> Proxmox VE 8.2.7</li>
+        </ul>
+        
+        <h3>Miscellaneous</h3>
+        <ul>
+            <li>UPS - APC Smart UPS X 3000</li>
+            <li>Switch - 3com Baseline Switch 2928-SFP Plus</li>
+        </ul>
+        
+        <h1><strong>Work Devices</strong></h1>
+        <ul>
+            <li>HP Z800 Workstation with Quadro 6000.</li>
+            <li>Acer Veriton S6610G with Quadro FX 1800.</li>
+        </ul>
+        
+        <h1><strong>Laptops</strong></h1>
+        <ul>
+            <li>2x Broken Thinkpad T495s - for parts.</li>
+            <li>Chromebook 100e Gen3 (laptop before I got the T495s).</li>
+            <li>HP Chromebook 11 G7 EE (for sale, charger available for $50).</li>
+            <li>Lenovo Thinkpad x240 (i5).</li>
+            <li>2x Lenovo Thinkpad T420.</li>
+            <li>Acer Chromebook C732 that I jailbroke and installed Windows on.</li>
+            <li>12 random Chromebooks - for parts</li>
+        </ul>
+        
+        <h1><strong>Tools</strong></h1>
+        <p>I use a variety of tools.</p>
+        <ul>
+            <li>iFixit Pro Tech Toolkit</li>
+            <li>iFixit Magnetic Project Mat</li>
+            <li>iFixit Anti-Static Project Tray</li>
+            <li>Generic soldering iron</li>
+            <li>Generic Screwdriver set</li>
+            <li>Generic multimeter</li>
+            <li>Stanley Junior Hacksaw</li>
+        </ul>
     </main>
 
     <!-- Footer -->
@@ -82,25 +185,5 @@
             <li><a href="https://www.instagram.com/undercovercomputing/" target="_blank" aria-label="Instagram"><img src="images/instagram.png" alt="Instagram"></a></li>
         </ul>
     </footer>
-
-    <!-- JavaScript for scroll animation -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const elements = document.querySelectorAll('.fade-in');
-
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                        observer.unobserve(entry.target);  // Stop observing once it has faded in
-                    }
-                });
-            });
-
-            elements.forEach(element => {
-                observer.observe(element);
-            });
-        });
-    </script>
 </body>
 </html>
