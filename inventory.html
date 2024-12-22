@@ -26,7 +26,7 @@
     <!-- ANIMATIONS GO HERE -->
     <style>
         /* Fade and slide from left animation */
-        @keyframes fadeIn {
+        @keyframes fadeInSlide {
             from {
                 opacity: 0;
                 transform: translateX(-50px);
@@ -51,50 +51,12 @@
         }
 
         /* Additional styling for list items */
-        ul {
-            list-style: none;
-            padding: 0;
-            margin: 20px 0;
-            opacity: 0; /* Start with hidden */
-            transform: translateX(-50px); /* Slide in from left */
-            animation: fadeIn 1s ease-out forwards; /* Apply animation */
-            animation-delay: 0.2s; /* Add a slight delay */
-        }
-
-        ul.visible {
-            opacity: 1; /* Make it visible when the list comes into view */
-            transform: translateX(0); /* Reset the slide-in */
-        }
-
         ul li {
             margin-bottom: 15px;
             font-size: 1.2rem;
             display: flex;
             align-items: center;
             gap: 10px;
-            opacity: 0;
-            transform: translateX(-50px);
-            animation: fadeIn 0.8s ease-out forwards;
-        }
-
-        /* Add animation delays for individual list items */
-        ul li:nth-child(1) { animation-delay: 0.2s; }
-        ul li:nth-child(2) { animation-delay: 0.4s; }
-        ul li:nth-child(3) { animation-delay: 0.6s; }
-        ul li:nth-child(4) { animation-delay: 0.8s; }
-        ul li:nth-child(5) { animation-delay: 1s; }
-        ul li:nth-child(6) { animation-delay: 1.2s; }
-        ul li:nth-child(7) { animation-delay: 1.4s; }
-        ul li:nth-child(8) { animation-delay: 1.6s; }
-
-        ul li strong {
-            font-weight: bold;
-            color: #007bff;
-            transition: color 0.3s ease;
-        }
-
-        ul li:hover strong {
-            color: #0056b3;
         }
     </style>
 
@@ -102,7 +64,6 @@
         // Intersection Observer for scrolling fade-in and list item slide-in
         document.addEventListener('DOMContentLoaded', function() {
             const fadeInElements = document.querySelectorAll('.fade-in');
-            const fadeInLists = document.querySelectorAll('ul');
 
             const observerOptions = {
                 root: null,
@@ -121,10 +82,6 @@
 
             fadeInElements.forEach(element => {
                 observer.observe(element);
-            });
-
-            fadeInLists.forEach(list => {
-                observer.observe(list); // Observe the entire list
             });
         });
     </script>
