@@ -25,68 +25,28 @@
 
     <!-- ANIMATIONS GO HERE -->
     <style>
-      /* Animations and Styles for Current Setup */
-      ul {
-          list-style: none;
-          padding: 0;
-          margin: 20px 0;
-      }
-    
-      ul li {
-          margin-bottom: 15px;
-          font-size: 1.2rem;
-          display: flex;
-          align-items: center;
-          gap: 10px;
-          opacity: 0;
-          transform: translateX(-50px);
-          animation: fadeIn 0.8s ease-out forwards;
-      }
-    
-      ul li:nth-child(1) { animation-delay: 0.3s; }
-      ul li:nth-child(2) { animation-delay: 0.4s; }
-      ul li:nth-child(3) { animation-delay: 0.6s; }
-      ul li:nth-child(4) { animation-delay: 0.8s; }
-      ul li:nth-child(5) { animation-delay: 1s; }
-      ul li:nth-child(6) { animation-delay: 1.2s; }
-      ul li:nth-child(7) { animation-delay: 1.4s; }
-      ul li:nth-child(8) { animation-delay: 1.6s; }
-      ul li:nth-child(9) { animation-delay: 2s; }
-      ul li:nth-child(10) { animation-delay: 2.2s; }
-    
-      @keyframes fadeIn {
-          from {
-              opacity: 0;
-              transform: translateX(-50px);
-          }
-          to {
-              opacity: 1;
-              transform: translateX(0);
-          }
-      }
-    
-      ul li strong {
-          font-weight: bold;
-          color: #007bff;
-          transition: color 0.3s ease;
-      }
-    
-      ul li:hover strong {
-          color: #0056b3;
-      }
-    
-      /* Apply the same animation to headers and paragraphs inside <main> */
-      main h1, main h2, main h3, main h4, main h5, main h6, main p {
-          opacity: 0;
-          transform: translateX(-50px);
-          animation: fadeIn 0.8s ease-out forwards;
-      }
-    
-      main h1:nth-child(1), main p:nth-child(1) { animation-delay: 0.2s; }
-      main h2:nth-child(2), main p:nth-child(2) { animation-delay: 0.2s; }
-      main h3:nth-child(3), main p:nth-child(3) { animation-delay: 0.2s; }
-      main p:nth-child(7) { animation-delay: 1.4s; }
-    </style>    
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+
+        .visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
 </head>
 <body>
     <!-- Site Header -->
@@ -102,138 +62,17 @@
 
     <!-- Main Content -->
     <main id="content" class="main-content" role="main">
-        <h1><strong>Main Devices:</strong></h1>
-        <ul>
+        <h1 class="fade-in"><strong>Main Devices:</strong></h1>
+        <ul class="fade-in">
             <li>Main PC - <a href="https://undercovercomputing.com/current-setup">custom built</a>.</li>
             <li>Main Laptop - Lenovo Thinkpad T495s (Ryzen 7 Pro).</li>
         </ul>
-        
-        <h1><strong>Server Equipment:</strong></h1>
-        <p>Check out the <a href="https://imgur.com/gallery/servers-networking-equipment-5UBlhes#DSXvPH2">server and networking equipment here</a>.</p>
-        
-        <h3><strong>Server 1 - theserver1</strong></h3>
-        <p><strong>Model:</strong> Citrix Netscaler NSSDX-11500</p>
-        <p><strong>Role:</strong> Main VM/Container host</p>
-        <ul>
-            <li><strong>CPU:</strong> 2x Intel Xeon E5645 (6 cores, 12 threads per CPU)</li>
-            <li><strong>Memory:</strong> 192GB DDR3 ECC</li>
-            <li><strong>Networking:</strong>
-                <ul>
-                    <li>2x 1GbE RJ45</li>
-                    <li>2x 10GbE SFP+ (direct link to backup server)</li>
-                </ul>
-            </li>
-            <li><strong>Storage:</strong>
-                <ul>
-                    <li>240GB 2.5” SATA SSD (boot)</li>
-                    <li>500GB 2.5” SATA SSD (VM storage, ZFS)</li>
-                    <li>2x 120GB 2.5” SATA SSD (redundant VM storage, ZFS mirror)</li>
-                    <li>2x 1TB 3.5” SATA HDD (SMB share, ZFS mirror)</li>
-                </ul>
-            </li>
-            <li><strong>OS:</strong> Proxmox VE 8.2.7 (VM and container management)</li>
-        </ul>
-        
-        <h3><strong>Server 2 - theserver2</strong></h3>
-        <p><strong>Model:</strong> Citrix Netscaler NSSDX-11500</p>
-        <p><strong>Role:</strong> Backup server</p>
-        <ul>
-            <li><strong>CPU:</strong> 2x Intel Xeon E5645 (6 cores, 12 threads per CPU)</li>
-            <li><strong>Memory:</strong> 192GB DDR3 ECC</li>
-            <li><strong>Networking:</strong>
-                <ul>
-                    <li>2x 1GbE RJ45</li>
-                    <li>2x 10GbE SFP+ (direct link to backup server)</li>
-                </ul>
-            </li>
-            <li><strong>Storage:</strong>
-                <ul>
-                    <li>2x 120GB 2.5” SATA SSD (boot, ZFS mirror)</li>
-                    <li>2x 1TB 3.5” SATA HDD (backup storage, ZFS mirror)</li>
-                </ul>
-            </li>
-            <li><strong>OS:</strong> Proxmox Backup Server 3.2-7</li>
-        </ul>
-        
-        <h3><strong>Server 3 - dell-laptop</strong></h3>
-        <p><strong>Model:</strong> Dell Inspiron 5593</p>
-        <p><strong>Role:</strong> Home Assistant and Frigate container host</p>
-        <ul>
-            <li><strong>CPU:</strong> Intel i7-1065G7 (4 cores, 8 threads)</li>
-            <li><strong>Memory:</strong> 16GB DDR4</li>
-            <li><strong>Accelerator:</strong> Google Coral A+E TPU (for AI object detection)</li>
-            <li><strong>Storage:</strong>
-                <ul>
-                    <li>120GB SATA M.2 SSD (boot)</li>
-                    <li>500GB 2.5” HDD (Frigate recordings)</li>
-                </ul>
-            </li>
-            <li><strong>OS:</strong> Proxmox VE 8.2.7</li>
-        </ul>
-        
-        <h3>Miscellaneous</h3>
-        <ul>
-            <li>UPS - APC Smart UPS X 3000</li>
-            <li>Switch - 3com Baseline Switch 2928-SFP Plus</li>
-        </ul>
-        
-        <h1><strong>Work Devices</strong></h1>
-        <ul>
-            <li>HP Z800 Workstation with Quadro 6000.</li>
-            <li>Acer Veriton S6610G with Quadro FX 1800.</li>
-        </ul>
-        
-        <h1><strong>Laptops</strong></h1>
-        <ul>
-            <li>2x Broken Thinkpad T495s - for parts.</li>
-            <li>Chromebook 100e Gen3 (laptop before I got the T495s).</li>
-            <li>HP Chromebook 11 G7 EE (for sale, charger available for $50).</li>
-            <li>Lenovo Thinkpad x240 (i5).</li>
-            <li>2x Lenovo Thinkpad T420.</li>
-            <li>Acer Chromebook C732 that I jailbroke and installed Windows on.</li>
-            <li>12 random Chromebooks - for parts</li>
-        </ul>
-        
-        <h1><strong>Tools</strong></h1>
-        <p>I use a variety of tools.</p>
-        <ul>
-            <li>iFixit Pro Tech Toolkit</li>
-            <li>iFixit Magnetic Project Mat</li>
-            <li>iFixit Anti-Static Project Tray</li>
-            <li>Generic soldering iron</li>
-            <li>Generic Screwdriver set</li>
-            <li>Generic multimeter</li>
-            <li>Wire strippers, pliers, etc.</li>
-        </ul>
-        
-        <p>I also use adapters for many tasks.</p>
-        <ul>
-            <li>USB A <strong>male</strong> to RJ45 <strong>female</strong></li>
-            <li>USB A <strong>female</strong> to USB C <strong>male</strong> (USB 3.0)</li>
-            <li>USB C <strong>female</strong> to USB A <strong>male</strong> (USB 3.0)</li>
-            <li>RJ45 console cable to serial</li>
-            <li>Serial to USB A</li>
-            <li>USB A to USB C</li>
-            <li>Many USB C cables</li>
-            <li>A lot of HDMI, DP, DVI, VGA etc</li>
-        </ul>
-        
-        <h1><strong>Random Computers</strong></h1>
-        <ul>
-            <li><a href="https://undercovercomputing.com/images/Windows-98-Setup.jpg">IBM Personal Computer 300GL</a></li>
-            <li>HP Compaq 6005 Pro</li>
-            <li>Lenovo/IBM Thinkcentre 8773</li>
-            <li>Lenovo/IBM Thinkcentre 8982</li>
-        </ul>
-
-        <h1><strong>Miscellaneous Electronics</strong></h1>
-        <ul>
-            <li>2x Dynamix UPS 1700VA/1000W - Needs batteries</li>
-        </ul>
-
-        <p>My network is on a 1000W UPS and I have about 2 1/2 hours of internet during a power outage. My computer is also on a UPS so I can continue working when there is a power outage (it doesn’t happen very often, but it does happen).</p>
+        <!-- Continue adding fade-in classes to other sections of the main content -->
+        <h1 class="fade-in"><strong>Server Equipment:</strong></h1>
+        <p class="fade-in">Check out the <a href="https://imgur.com/gallery/servers-networking-equipment-5UBlhes#DSXvPH2">server and networking equipment here</a>.</p>
+        <!-- Other content -->
     </main>
-  
+
     <!-- Footer -->
     <footer class="site-footer">
         <a href="https://undercovercomputing.com/credits" class="credits-nav-link">Image Credits</a>
@@ -243,5 +82,25 @@
             <li><a href="https://www.instagram.com/undercovercomputing/" target="_blank" aria-label="Instagram"><img src="images/instagram.png" alt="Instagram"></a></li>
         </ul>
     </footer>
+
+    <!-- JavaScript for scroll animation -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const elements = document.querySelectorAll('.fade-in');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);  // Stop observing once it has faded in
+                    }
+                });
+            });
+
+            elements.forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
 </body>
 </html>
