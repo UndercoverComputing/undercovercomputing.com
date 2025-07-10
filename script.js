@@ -1,3 +1,9 @@
+// Google Analytics
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-JW2357S3TQ');
+
 function copyEmail(event) {
     // Prevent the default action of the anchor tag
     event.preventDefault();
