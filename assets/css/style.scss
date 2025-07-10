@@ -95,10 +95,13 @@ img.project-name {
 }
 
 @media (max-width: 800px) {
-    img.project-name {
-        max-width: 100%;
-        margin-top: -20px;
-    }
+  .service-content {
+    text-align: center;
+  }
+
+  .service-content h2 {
+    text-align: left; /* <-- keep headings left-aligned even on mobile */
+  }
 }
 
 /* Footer */
