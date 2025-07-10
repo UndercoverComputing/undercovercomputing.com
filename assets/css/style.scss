@@ -100,7 +100,11 @@ img.project-name {
   }
 
   .service-content h2 {
-    text-align: left; /* <-- keep headings left-aligned even on mobile */
+    text-align: center; /* now center heading too */
+  }
+
+  .service-content ul {
+    text-align: center; /* center the bullet points */
   }
 }
 
