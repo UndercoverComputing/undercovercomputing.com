@@ -1,5 +1,3 @@
 User-agent: *
 Allow: /
 Disallow: /credits.html
-Disallow: /current-setup.html
-Disallow: /inventory.html
